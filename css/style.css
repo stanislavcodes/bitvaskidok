@@ -1,0 +1,433 @@
+@font-face {
+  font-family: "GothLight";
+  src: url("../css/fonts/GothamPro-Light.eot");
+  src: url("../css/fonts/GothamPro-Light.woff") format("woff"), url("../css/fonts/GothamPro-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "GothMedium";
+  src: url("../css/fonts/GothamPro-Medium.eot");
+  src: url("../css/fonts/GothamPro-Medium.woff") format("woff"), url("../css/fonts/GothamPro-Medium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "GothBold";
+  src: url("../css/fonts/GothamPro-Bold.eot");
+  src: url("../css/fonts/GothamPro-Bold.woff") format("woff"), url("../css/fonts/GothamPro-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "GothBlack";
+  src: url("../css/fonts/GothamPro-Black.eot");
+  src: url("../css/fonts/GothamPro-Black.woff") format("woff"), url("../css/fonts/GothamPro-Black.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "RaleReg";
+  src: url("../css/fonts/Raleway-Regular.eot");
+  src: url("../css/fonts/Raleway-Regular.woff") format("woff"), url("../css/fonts/Raleway-Regular.ttf") format("truetype"); }
+
+body {
+  font-family: "GothLight", sans-serif;
+  font-size: 1.5rem; }
+
+.heading--section {
+  font-family: 'GothBlack', sans-serif;
+  text-transform: uppercase;
+  font-size: 3.6rem;
+  text-align: center;
+  z-index: 100; }
+  .heading--section-white {
+    color: #ffffff; }
+
+.heading--cta {
+  font-family: 'GothBlack', sans-serif;
+  color: #ffffff;
+  font-size: 3rem; }
+  .heading--cta-black {
+    color: #000; }
+
+.heading--primary {
+  width: 100%; }
+
+.heading--secondary {
+  font-family: 'GothBlack', sans-serif;
+  text-transform: uppercase;
+  font-size: 2.4rem; }
+
+.heading--tertiary {
+  font-family: 'GothMedium', sans-serif;
+  font-size: 2.4rem;
+  color: #fff; }
+
+.heading--small {
+  font-family: 'GothBold', sans-serif;
+  font-size: 2.1rem; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-size: 62.5%; }
+
+body {
+  box-sizing: inherit;
+  width: 100vw;
+  overflow-x: hidden; }
+
+body::-webkit-scrollbar {
+  width: 5px; }
+
+body::-webkit-scrollbar-thumb {
+  background-color: #979797; }
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 86rem;
+  padding: 0 37.5rem 0 37.5rem;
+  background-image: url(../img/header-bg.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column; }
+  .header__parallax {
+    width: 100%;
+    height: 45rem;
+    display: flex;
+    justify-content: center;
+    z-index: 4; }
+    .header__parallax--container {
+      position: relative;
+      width: 100%;
+      height: 45rem; }
+    .header__parallax > div {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .header__parallax--small {
+      z-index: 100; }
+  .header__heading-box {
+    z-index: 30;
+    width: 80rem;
+    display: grid;
+    margin: 0 auto;
+    row-gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content); }
+    .header__heading-box > div {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .header__heading-box--secondary {
+      grid-row: 1 / 2;
+      justify-self: center;
+      width: 35rem;
+      height: 5rem;
+      background-color: #fff; }
+    .header__heading-box--primary {
+      grid-row: 2 / 3; }
+    .header__heading-box--tertiary {
+      grid-row: 3 / 4;
+      justify-self: center;
+      width: 20rem;
+      height: 4.5rem;
+      background-color: #008aff;
+      transform: rotate(-5deg) translateX(10%);
+      box-shadow: 0.5rem 0.5rem 0 #00000056; }
+  .header__info {
+    font-family: "GothMedium", sans-serif;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    margin-bottom: 4.5rem; }
+    .header__info--black {
+      font-family: "GothBlack", sans-serif; }
+
+.btn--main {
+  border: none;
+  border-radius: 1rem;
+  align-self: center;
+  width: 23rem;
+  height: 6rem;
+  background-color: #d60505;
+  cursor: pointer;
+  transition: all 100ms ease-in-out; }
+  .btn--main a {
+    font-family: "GothBold", sans-serif;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+    color: #fff; }
+  .btn--main:hover {
+    background-color: #ad0000; }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem; }
+  .nav__list {
+    list-style: none;
+    display: flex;
+    align-items: center; }
+  .nav__item:not(:last-child) {
+    margin-right: 2rem; }
+  .nav__link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #000; }
+    .nav__link--red {
+      color: #d60505;
+      font-family: "GothBold", sans-serif; }
+
+.content {
+  width: 100%; }
+
+.section {
+  padding: 12rem 37.5rem 0 37.5rem; }
+  .section__heading-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  .section__highlighter {
+    display: block;
+    width: 51rem;
+    height: 2rem;
+    transform: translateY(-100%); }
+    .section__highlighter--yellow {
+      background-color: #ffd52b; }
+    .section__highlighter--green {
+      background-color: #32b228; }
+  .section--1 {
+    height: 80rem; }
+    .section--1__info-box {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      margin-top: 7.5rem;
+      justify-items: center; }
+      .section--1__info-box > div {
+        max-width: 30rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .section--1__info-box > div p {
+          text-align: center;
+          line-height: 1.4; }
+        .section--1__info-box > div h5 {
+          margin: 3rem 0 2.5rem 0; }
+      .section--1__info-box .progress-bar {
+        width: 13rem;
+        height: 13rem; }
+  .section--2 {
+    height: 110rem;
+    width: 100%;
+    background: url(../img/bg-2.png) center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .section--2__info-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 5rem; }
+      .section--2__info-box h4 {
+        margin: 5rem 0 4rem 0; }
+    .section--2__icon {
+      width: 5rem;
+      height: auto;
+      margin-bottom: 2rem; }
+    .section--2__names {
+      font-family: "GothMedium", sans-serif;
+      font-size: 1.6rem;
+      color: #fff;
+      text-align: center; }
+    .section--2__grid {
+      width: 100%;
+      height: 55rem;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(3, 1fr); }
+      .section--2__grid--item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; }
+  .section--3 {
+    width: 100%;
+    height: 95rem; }
+    .section--3__info-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 5rem; }
+      .section--3__info-box h4 {
+        margin: 9rem 0 3.5rem 0; }
+      .section--3__info-box > div p {
+        text-align: center;
+        line-height: 1.4; }
+      .section--3__info-box > div h5 {
+        margin: 3.5rem 0;
+        text-align: center;
+        max-width: 33rem;
+        font-family: "GothBold", sans-serif; }
+    .section--3__names {
+      font-family: "GothMedium", sans-serif;
+      font-size: 1.6rem;
+      color: #fff;
+      text-align: center; }
+    .section--3__icon-box {
+      width: 13rem;
+      height: 13rem;
+      border-radius: 20rem;
+      border: 0.5rem solid #e8eff5;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .section--3__icon {
+      width: 5rem;
+      height: auto; }
+    .section--3__grid {
+      width: 100%;
+      height: 40rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr; }
+      .section--3__grid--item {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+  .section--4 {
+    position: relative;
+    height: 170rem;
+    width: 100vw;
+    background: #fff;
+    padding: 0;
+    background: url(../img/4/bg-4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center; }
+    .section--4__heading-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 31rem;
+      height: 6.5rem;
+      background-color: #008aff;
+      transform: rotate(-5deg) translateX(10%);
+      box-shadow: 0.5rem 0.5rem 0 #00000056; }
+    .section--4__big-txt {
+      font-family: "GothBlack", sans-serif;
+      font-size: 60px;
+      margin-top: 2rem;
+      color: #fff; }
+    .section--4 .road {
+      margin-top: 80rem;
+      width: 125rem;
+      height: 100rem;
+      background: url(../img/4/road.png) center no-repeat;
+      background-size: 70%;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1.5fr 1fr; }
+    .section--4 .pin {
+      width: 62px;
+      height: 86px; }
+      .section--4 .pin-1 {
+        margin: 8rem 0 0 22.9rem; }
+      .section--4 .pin-2 {
+        margin: 8rem 60.6rem 0 0; }
+      .section--4 .pin-3 {
+        margin: 1rem 0 0 40.1rem; }
+    .section--4 .row {
+      display: grid;
+      grid-template-rows: 1fr; }
+      .section--4 .row-left {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2; }
+      .section--4 .row-right {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2; }
+      .section--4 .row-1 {
+        grid-template-columns: min-content 1fr; }
+      .section--4 .row-2 {
+        grid-template-columns: 1fr min-content;
+        grid-template-rows: 1fr; }
+      .section--4 .row-3 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr; }
+    .section--4 .text {
+      width: 100%;
+      height: 100%; }
+      .section--4 .text-1 {
+        text-align: left;
+        padding: 8rem 0 0 11rem; }
+      .section--4 .text-2 {
+        text-align: right;
+        padding-right: 11rem; }
+      .section--4 .text-3 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; }
+      .section--4 .text h2 {
+        font-family: 'GothBold', sans-serif;
+        font-size: 30px;
+        margin-bottom: 3rem; }
+      .section--4 .text p {
+        color: #000;
+        font-family: 'GothLight', sans-serif;
+        font-size: 1.7rem;
+        line-height: 1.4;
+        max-width: 510px; }
+  .section .parallax-2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .section .parallax-2__container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: url(../img/parallax-2/parallax-2_bg.png);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: none; }
+    .section .parallax-2 > div {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }
+    .section .parallax-2 > div:nth-child(3) {
+      padding-top: 20rem;
+      justify-content: flex-start; }

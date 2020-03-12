@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "GothLight";
+  src: url("../css/fonts/GothamPro-Light.eot");
+  src: url("../css/fonts/GothamPro-Light.woff") format("woff"),
+    url("../css/fonts/GothamPro-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GothMedium";
+  src: url("../css/fonts/GothamPro-Medium.eot");
+  src: url("../css/fonts/GothamPro-Medium.woff") format("woff"),
+    url("../css/fonts/GothamPro-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GothBold";
+  src: url("../css/fonts/GothamPro-Bold.eot");
+  src: url("../css/fonts/GothamPro-Bold.woff") format("woff"),
+    url("../css/fonts/GothamPro-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GothBlack";
+  src: url("../css/fonts/GothamPro-Black.eot");
+  src: url("../css/fonts/GothamPro-Black.woff") format("woff"),
+    url("../css/fonts/GothamPro-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "RaleReg";
+  src: url("../css/fonts/Raleway-Regular.eot");
+  src: url("../css/fonts/Raleway-Regular.woff") format("woff"),
+    url("../css/fonts/Raleway-Regular.ttf") format("truetype");
+}
+
+body {
+  font-family: "GothLight", sans-serif;
+  font-size: 1.5rem;
+}
+
+
+.heading {
+  &--section {
+    font-family: 'GothBlack', sans-serif;
+    text-transform: uppercase;
+    font-size: 3.6rem;
+    text-align: center;
+    z-index: 100;
+
+    &-white {
+      color: #ffffff;
+    } 
+  }
+
+  &--cta {
+    font-family: 'GothBlack', sans-serif;
+    color: #ffffff;
+    font-size: 3rem;
+    &-black { color: #000; }
+  }
+
+  &--primary {
+    width: 100%;
+  }
+  &--secondary {
+    font-family: 'GothBlack', sans-serif;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+  }
+  &--tertiary {
+    font-family: 'GothMedium', sans-serif;
+    font-size: 2.4rem;
+    color: #fff;
+  }
+
+  &--small {
+    font-family: 'GothBold', sans-serif;
+    font-size: 2.1rem;
+  }
+}
