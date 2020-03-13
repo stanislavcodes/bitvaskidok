@@ -62,9 +62,7 @@
 
   &__heading-box {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     flex-direction: column;
   }
   &__highlighter {
@@ -78,6 +76,9 @@
     }
     &--green {
       background-color: #32b228;
+    }
+    &--white {
+      background-color: #ffffff;
     }
   }
   &--1 {
@@ -154,10 +155,8 @@
       grid-template-rows: repeat(3, 1fr);
 
       &--item {
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        @include flex-center;
       }
     }
   }
@@ -202,9 +201,7 @@
       height: 13rem;
       border-radius: 20rem;
       border: 0.5rem solid #e8eff5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flex-center;
     }
 
     &__icon {
@@ -240,9 +237,7 @@
     justify-content: center;
 
     &__heading-box {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex-center;
       width: 31rem;
       height: 6.5rem;
       background-color: #008aff;
@@ -368,18 +363,14 @@
       height: 100%;
       background: url(../img/parallax-2/parallax-2_bg.png);
       background-size: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex-center;
       // display: none;
     }
 
     position: relative;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
 
     & > div {
       width: 100%;
@@ -389,9 +380,7 @@
       left: 0;
       right: 0;
       z-index: 3;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flex-center;
       flex-direction: column;
       //background-size: 55%;
     }
@@ -403,6 +392,51 @@
   }
 
   &--5 {
+    height: 67rem;
+    background: url(../img/bg-5.png) center no-repeat;
+    background-size: cover;
+    @include flex-center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    &__paragraph {
+      font-size: 1.6rem;
+      text-align: center;
+      margin: 3.5rem 0 6.5rem 0;
+    }
+
+    &__grid {
+      display: grid;
+      column-gap: 4.5rem;
+      grid-template-columns: repeat(7, min-content);
+    }
+
+    &__icon {
+      &-box {
+        width: 12rem;
+        height: 7rem;
+        background-color: #fff;
+        @include flex-center;
+        flex-direction: column;
+      }
+
+      &-name {
+        text-align: center;
+        font-size: 1.6rem;
+        font-family: 'GothMedium', sans-serif;
+        margin-top: 1.5rem;
+      }
+
+      width: 5rem;
+      height: 5rem;
+    }
+
+    &__heading {
+      font-size: 2.3rem;
+      font-family: 'GothBold', sans-serif;
+      letter-spacing: 25;
+      margin: 7rem 0 12rem 0;
+    }
   }
 
   &--6 {
