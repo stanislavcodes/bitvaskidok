@@ -229,7 +229,7 @@
 
   &--4 {
     position: relative;
-    height: 170rem;
+    height: 155rem;
     width: 100vw;
     background: #fff;
     padding: 0;
@@ -258,28 +258,38 @@
     }
 
     .road {
-      margin-top: 75rem;
-      width: 125rem;
-      height: 100rem;
-      background: url(../img/4/road.png) center no-repeat;
-      background-size: 70%;
+      margin: 55rem 0 0 20%;
+      width: 115rem;
+      height: 85rem;
+      // background: url(../img/4/road.png) center no-repeat;
+      // background-size: 70%;
       position: relative;
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1.5fr 1fr;
+      grid-template-rows: repeat(3, 1fr);
+
+      &__background {
+        z-index: -1;
+        width: 725px;
+        height: 574px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
     .pin {
       width: 62px;
       height: 86px;
 
       &-1 {
-        margin: 8rem 0 0 22.9rem;
+        margin: 6rem 0 0 24.1rem;
       }
       &-2 {
-        margin: 8rem 60.6rem 0 0;
+        margin: 9.4rem 55.4rem 0 0;
       }
       &-3 {
-        margin: 1rem 0 0 40.1rem;
+        margin: 16rem 0 0 38.5rem;
       }
     }
     .row {
@@ -294,6 +304,9 @@
       &-right {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
+      }
+      &-column {
+        margin-bottom: 5rem;
       }
 
       &-1 {
@@ -323,21 +336,21 @@
       }
       &-3 {
         display: flex;
-        justify-content: center;
+        // justify-content: center;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-right: 38rem;
+        padding-right: 33rem;
       }
 
       h2 {
-        font-family: 'GothBold', sans-serif;
+        font-family: "GothBold", sans-serif;
         font-size: 30px;
         margin-bottom: 3rem;
       }
       p {
         color: #000;
-        font-family: 'GothLight', sans-serif;
+        font-family: "GothLight", sans-serif;
         font-size: 1.7rem;
         line-height: 1.4;
         max-width: 510px;
