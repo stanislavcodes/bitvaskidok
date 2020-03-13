@@ -1,7 +1,7 @@
 .btn {
   &--main {
     a {
-      font-family: "GothBold", sans-serif;
+      font-family: $gpBold;
       font-size: 1.6rem;
       text-transform: uppercase;
       text-decoration: none;
@@ -48,7 +48,7 @@
 
     &--red {
       color: #d60505;
-      font-family: "GothBold", sans-serif;
+      font-family: $gpBold;
     }
   }
 }
@@ -58,7 +58,7 @@
 }
 
 .section {
-  padding: 12rem 37.5rem 0 37.5rem;
+  padding: 11rem 37.5rem 0 37.5rem;
 
   &__heading-box {
     position: relative;
@@ -116,7 +116,7 @@
   &--2 {
     height: 110rem;
     width: 100%;
-    background: url(../img/bg-2.png) center no-repeat;
+    background: url(../img/2/bg-2.png) center no-repeat;
     background-size: cover;
 
     display: flex;
@@ -141,7 +141,7 @@
     }
 
     &__names {
-      font-family: "GothMedium", sans-serif;
+      font-family: $gpMedium;
       font-size: 1.6rem;
       color: #fff;
       text-align: center;
@@ -184,13 +184,13 @@
           margin: 3.5rem 0;
           text-align: center;
           max-width: 33rem;
-          font-family: "GothBold", sans-serif;
+          font-family: $gpBold;
         }
       }
     }
 
     &__names {
-      font-family: "GothMedium", sans-serif;
+      font-family: $gpMedium;
       font-size: 1.6rem;
       color: #fff;
       text-align: center;
@@ -246,7 +246,7 @@
     }
 
     &__big-txt {
-      font-family: "GothBlack", sans-serif;
+      font-family: $gpBlack;
       font-size: 60px;
       margin-top: 2rem;
       color: #fff;
@@ -342,7 +342,7 @@
       }
       p {
         color: #000;
-        font-family: "GothLight", sans-serif;
+        font-family: $gpLight;
         font-size: 1.7rem;
         line-height: 1.4;
         max-width: 51rem;
@@ -390,7 +390,7 @@
 
   &--5 {
     height: 67rem;
-    background: url(../img/bg-5.png) center no-repeat;
+    background: url(../img/5/bg-5.png) center no-repeat;
     background-size: cover;
     @include flex-center;
     justify-content: flex-start;
@@ -420,7 +420,7 @@
       &-name {
         text-align: center;
         font-size: 1.6rem;
-        font-family: 'GothMedium', sans-serif;
+        font-family: "GothMedium", sans-serif;
         margin-top: 1.5rem;
       }
 
@@ -430,15 +430,151 @@
 
     &__heading {
       font-size: 2.3rem;
-      font-family: 'GothBold', sans-serif;
+      font-family: "GothBold", sans-serif;
       letter-spacing: 25;
       margin: 7rem 0 12rem 0;
     }
   }
 
   &--6 {
+    height: 97.5rem;
+
+    &__info {
+      font-size: 2.2rem;
+      line-height: 1.4;
+      font-family: $gpLight;
+      margin: 4rem 0 4rem 0;
+    }
+
+    ///////////////////////// table
+
+    .table {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .row {
+      height: 7rem;
+    }
+
+    .col {
+      &-5 {
+        border-left: 0.5rem solid #e8e8e8;
+        border-right: 0.5rem solid #e8e8e8;
+        &--start {
+          border-top: 0.5rem solid #e8e8e8;
+        }
+        &--end {
+          border-bottom: 0.5rem solid #e8e8e8;
+        }
+      }
+
+      &-sm {
+        width: 18rem;
+        // background: #e67e22;
+
+        &__content {
+          @include flex-center;
+
+          h3 {
+            font-family: $gpBlack;
+            font-size: 1.8rem;
+          }
+        }
+
+        &__icon {
+          &--check {
+            width: 2.6rem;
+            height: 2rem;
+          }
+
+          &--not {
+            width: 2rem;
+            height: 2rem;
+          }
+        }
+
+        &__link {
+          font-family: $gpMedium;
+          font-size: 1.3rem;
+          color: #e52121;
+          text-decoration: none;
+          border: none;
+          border-bottom: 1px solid #e52121;
+        }
+
+        &__headliner {
+          position: relative;
+
+          &-box {
+            @include flex-center;
+            transform: rotate(-11deg);
+            position: absolute;
+            top: -5rem;
+            left: -3rem;
+            width: 19rem;
+            height: 4rem;
+            background-color: #008aff;
+            font-family: $gpBold;
+            color: #fff;
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      &-bg {
+        width: 40rem;
+
+        &__text {
+          font-family: $gpLight;
+            font-size: 1.5rem;
+            color: #4f4f4f;
+        }
+      }
+    }
   }
 
   &--7 {
+    height: 70rem;
+    background: url(../img/7/bg-7.png) center no-repeat;
+    background-size: cover;
+
+
+    .question {
+      width: 100%;
+      height: 7rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+      padding: 0 3rem;
+
+      &s-box {
+        @include flex-center;
+        width: 100rem;
+        flex-direction: column;
+        margin-top: 10rem;
+      }
+
+      &__name {
+        font-family: $gpBold;
+        font-size: 2.6rem;
+      }
+
+      &__icon {
+        width: 3rem;
+        height: 1.7rem;
+        cursor: pointer;
+      }
+    }
+
+    .answer {
+      display: none;
+      &__text {
+
+      }
+    }
   }
 }
