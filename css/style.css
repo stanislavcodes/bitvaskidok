@@ -341,7 +341,7 @@ body::-webkit-scrollbar-thumb {
       color: #fff; }
     .section--4 .road {
       margin: 55rem 0 0 20%;
-      width: 115rem;
+      width: 130rem;
       height: 85rem;
       position: relative;
       display: grid;
@@ -359,11 +359,11 @@ body::-webkit-scrollbar-thumb {
       width: 62px;
       height: 86px; }
       .section--4 .pin-1 {
-        margin: 6rem 0 0 24.1rem; }
+        margin: 6rem 0 0 31.6rem; }
       .section--4 .pin-2 {
-        margin: 9.4rem 55.4rem 0 0; }
+        margin: 11.4rem 62.9rem 0 0; }
       .section--4 .pin-3 {
-        margin: 16rem 0 0 38.5rem; }
+        margin: 18rem 0 0 45.9rem; }
     .section--4 .row {
       display: grid;
       grid-template-rows: 1fr; }
@@ -388,26 +388,26 @@ body::-webkit-scrollbar-thumb {
       height: 100%; }
       .section--4 .text-1 {
         text-align: left;
-        padding: 7rem 0 0 11rem; }
+        padding: 4rem 0 0 14rem; }
       .section--4 .text-2 {
         text-align: right;
-        padding: 7rem 11rem 0 0; }
+        padding: 8rem 15rem 0 0; }
       .section--4 .text-3 {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-right: 33rem; }
+        padding-right: 32rem; }
       .section--4 .text h2 {
         font-family: "GothBold", sans-serif;
-        font-size: 30px;
+        font-size: 3rem;
         margin-bottom: 3rem; }
       .section--4 .text p {
         color: #000;
         font-family: "GothLight", sans-serif;
         font-size: 1.7rem;
         line-height: 1.4;
-        max-width: 510px; }
+        max-width: 51rem; }
   .section .parallax-2 {
     position: relative;
     width: 100%;
