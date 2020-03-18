@@ -558,7 +558,7 @@
       transition: all ease-in-out 1s;
 
       &:not(:last-child) {
-        border-bottom: 1px solid #E1EBF5;
+        border-bottom: 1px solid #e1ebf5;
       }
 
       &s-box {
@@ -609,6 +609,210 @@
           transition: all ease-in-out 1s;
         }
       }
+    }
+  }
+
+  &--8 {
+    // padding-bottom: 10rem;
+    height: 165rem;
+    position: relative;
+
+    &__info-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 100;
+    }
+
+    &__info {
+      max-width: 95rem;
+    }
+    &__text {
+      font-family: $gpLight;
+      font-size: 1.8rem;
+    }
+
+    &__logo {
+      margin: 9rem 0 8rem 0;
+    }
+
+    &__form {
+      margin-top: 10rem;
+      &--heading {
+        font-size: 3rem;
+        font-family: $gpBlack;
+        margin-bottom: 4rem;
+      }
+
+      &--text {
+        font-family: $gpLight;
+        font-size: 1.8rem;
+        margin-bottom: 6rem;
+      }
+
+      &--grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        justify-items: center;
+
+        .col {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .icon-box {
+          @include flex-center;
+          width: 8rem;
+          height: 8rem;
+          border-radius: 10rem;
+          background: #fff;
+          border: 0.4rem solid #e8e8e8;
+
+          .icon {
+            width: 28px;
+            height: 28px;
+            &-1 {
+              fill: #43a8f6;
+            }
+            &-2 {
+              fill: #37bb0f;
+            }
+            &-3 {
+              fill: #d60505;
+            }
+          }
+        }
+
+        .link {
+          color: #000;
+          text-decoration: none;
+          border: none;
+          margin: 3rem 0 5rem 0;
+        }
+      }
+    }
+
+    .form {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, min-content);
+      row-gap: 3rem;
+      column-gap: 3rem;
+
+      font-family: $gpLight;
+
+      .input {
+        height: 5rem;
+        border: 0.4rem solid #e8e8e8;
+        padding: 2rem;
+        font-size: 1.5rem;
+
+        &::placeholder {
+          font-family: $gpLight;
+        }
+
+        &--big {
+          width: 87rem;
+          grid-column: 1 / 4;
+        }
+        &--small {
+          width: 27rem;
+        }
+      }
+      textarea {
+        resize: none;
+        grid-column: 1 / 4;
+        width: 100%;
+        height: 19rem;
+        border: 0.4rem solid #e8e8e8;
+        padding: 2rem;
+        font-size: 1.5rem;
+
+        &::placeholder {
+          font-family: $gpLight;
+        }
+      }
+
+      &--btn {
+        font-family: $gpBold;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.2rem;
+        color: #fff;
+
+        justify-self: center;
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+        margin-top: 2rem;
+      }
+    }
+
+    .parallax-3 {
+      &__container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        @include flex-center;
+        // display: none;
+        z-index: -1;
+      }
+
+      position: relative;
+      width: 100%;
+      height: 100%;
+      @include flex-center;
+
+      & > div {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        @include flex-center;
+        flex-direction: column;
+      }
+
+      & > div:nth-child(3) {
+        // padding-top: 20rem;
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 22rem;
+  background-color: #ffd52a;
+
+  @include flex-center;
+  flex-direction: column;
+
+  &__link {
+    color: #000;
+    text-decoration: none;
+    border: none;
+    font-size: 1.6rem;
+    font-family: $gpMedium;
+  }
+
+  &__logo {
+    margin: 2rem 0 3rem 0;
+  }
+
+  &__copy {
+    line-height: 1.4;
+
+    span {
+      font-family: $gpBold;
     }
   }
 }

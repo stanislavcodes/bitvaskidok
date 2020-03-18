@@ -562,7 +562,7 @@ body::-webkit-scrollbar-thumb {
       cursor: pointer;
       transition: all ease-in-out 1s; }
       .section--7 .question:not(:last-child) {
-        border-bottom: 1px solid #E1EBF5; }
+        border-bottom: 1px solid #e1ebf5; }
       .section--7 .questions-box {
         display: flex;
         justify-content: center;
@@ -599,3 +599,153 @@ body::-webkit-scrollbar-thumb {
         .section--7 .answer--closed .answer__text {
           font-size: 0;
           transition: all ease-in-out 1s; }
+  .section--8 {
+    height: 165rem;
+    position: relative; }
+    .section--8__info-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 100; }
+    .section--8__info {
+      max-width: 95rem; }
+    .section--8__text {
+      font-family: "GothLight", sans-serif;
+      font-size: 1.8rem; }
+    .section--8__logo {
+      margin: 9rem 0 8rem 0; }
+    .section--8__form {
+      margin-top: 10rem; }
+      .section--8__form--heading {
+        font-size: 3rem;
+        font-family: "GothBlack", sans-serif;
+        margin-bottom: 4rem; }
+      .section--8__form--text {
+        font-family: "GothLight", sans-serif;
+        font-size: 1.8rem;
+        margin-bottom: 6rem; }
+      .section--8__form--grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        justify-items: center; }
+        .section--8__form--grid .col {
+          display: flex;
+          flex-direction: column;
+          align-items: center; }
+        .section--8__form--grid .icon-box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 8rem;
+          height: 8rem;
+          border-radius: 10rem;
+          background: #fff;
+          border: 0.4rem solid #e8e8e8; }
+          .section--8__form--grid .icon-box .icon {
+            width: 28px;
+            height: 28px; }
+            .section--8__form--grid .icon-box .icon-1 {
+              fill: #43a8f6; }
+            .section--8__form--grid .icon-box .icon-2 {
+              fill: #37bb0f; }
+            .section--8__form--grid .icon-box .icon-3 {
+              fill: #d60505; }
+        .section--8__form--grid .link {
+          color: #000;
+          text-decoration: none;
+          border: none;
+          margin: 3rem 0 5rem 0; }
+    .section--8 .form {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, min-content);
+      row-gap: 3rem;
+      column-gap: 3rem;
+      font-family: "GothLight", sans-serif; }
+      .section--8 .form .input {
+        height: 5rem;
+        border: 0.4rem solid #e8e8e8;
+        padding: 2rem;
+        font-size: 1.5rem; }
+        .section--8 .form .input::placeholder {
+          font-family: "GothLight", sans-serif; }
+        .section--8 .form .input--big {
+          width: 87rem;
+          grid-column: 1 / 4; }
+        .section--8 .form .input--small {
+          width: 27rem; }
+      .section--8 .form textarea {
+        resize: none;
+        grid-column: 1 / 4;
+        width: 100%;
+        height: 19rem;
+        border: 0.4rem solid #e8e8e8;
+        padding: 2rem;
+        font-size: 1.5rem; }
+        .section--8 .form textarea::placeholder {
+          font-family: "GothLight", sans-serif; }
+      .section--8 .form--btn {
+        font-family: "GothBold", sans-serif;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.2rem;
+        color: #fff;
+        justify-self: center;
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+        margin-top: 2rem; }
+    .section--8 .parallax-3 {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .section--8 .parallax-3__container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: -1; }
+      .section--8 .parallax-3 > div {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+      .section--8 .parallax-3 > div:nth-child(3) {
+        justify-content: flex-start; }
+
+.footer {
+  width: 100%;
+  height: 22rem;
+  background-color: #ffd52a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .footer__link {
+    color: #000;
+    text-decoration: none;
+    border: none;
+    font-size: 1.6rem;
+    font-family: "GothMedium", sans-serif; }
+  .footer__logo {
+    margin: 2rem 0 3rem 0; }
+  .footer__copy {
+    line-height: 1.4; }
+    .footer__copy span {
+      font-family: "GothBold", sans-serif; }
