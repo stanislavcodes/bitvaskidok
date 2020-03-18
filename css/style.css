@@ -544,9 +544,13 @@ body::-webkit-scrollbar-thumb {
         font-size: 1.5rem;
         color: #4f4f4f; }
   .section--7 {
-    height: 70rem;
-    background: url(../img/7/bg-7.png) center no-repeat;
-    background-size: cover; }
+    background: url(../img/7/bg-7.png), #008aff;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10rem; }
     .section--7 .question {
       width: 100%;
       height: 7rem;
@@ -554,20 +558,44 @@ body::-webkit-scrollbar-thumb {
       align-items: center;
       justify-content: space-between;
       background-color: #fff;
-      padding: 0 3rem; }
+      padding: 0 3rem;
+      cursor: pointer;
+      transition: all ease-in-out 1s; }
+      .section--7 .question:not(:last-child) {
+        border-bottom: 1px solid #E1EBF5; }
       .section--7 .questions-box {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100rem;
         flex-direction: column;
-        margin-top: 10rem; }
+        margin-top: 10rem;
+        transition: height ease-in-out 1s; }
       .section--7 .question__name {
         font-family: "GothBold", sans-serif;
         font-size: 2.6rem; }
       .section--7 .question__icon {
         width: 3rem;
-        height: 1.7rem;
-        cursor: pointer; }
+        height: 1.7rem; }
+        .section--7 .question__icon--closed {
+          fill: #e2ecf5;
+          transform: rotate(180deg); }
     .section--7 .answer {
-      display: none; }
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e2ecf5;
+      padding: 3rem;
+      transition: all ease-in-out 1s; }
+      .section--7 .answer__text {
+        font-family: "GothLight", sans-serif;
+        font-size: 1.8rem; }
+      .section--7 .answer--closed {
+        height: 0;
+        display: none;
+        transition: height ease-in-out 1s; }
+        .section--7 .answer--closed .answer__text {
+          font-size: 0;
+          transition: all ease-in-out 1s; }
