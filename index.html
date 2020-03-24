@@ -10,32 +10,32 @@
   </head>
   <body>
     <nav class="nav nav-2" id="nav2">
-      <a class="nav__logo nav-2__logo" href="#header"
+      <a class="nav__logo nav-2__logo" href="#"
         ><img src="img/logo.png" alt="logo"
       /></a>
       <ul class="nav__list nav-2__list">
         <li class="nav__item nav-2__item">
-          <p class="nav__link nav-2__link linkHow">
+          <a href="#how" class="nav__link nav-2__link ">
             Как будет проходить
-          </p>
+          </a>
         </li>
         <li class="nav__item nav-2__item">
-          <p class="nav__link nav-2__link linkWho">
+          <a href="#who" class="nav__link nav-2__link ">
             Кто может участвовать
-          </p>
+          </a>
         </li>
         <li class="nav__item nav-2__item">
-          <p class="nav__link nav-2__link linkTar">Тарифы</p>
+          <a href="#tariffs" class="nav__link nav-2__link ">Тарифы</a>
         </li>
         <li class="nav__item nav-2__item">
-          <p class="nav__link nav-2__link linkOrg">
+          <a href="#organizers" class="nav__link nav-2__link ">
             Организаторы
-          </p>
+          </a>
         </li>
         <li class="nav__item">
-          <p class="nav__link nav-2__link linkCon">
+          <a href="#" class="nav__link nav-2__link ">
             Контакты
-          </p>
+          </a>
         </li>
         <li class="nav__item nav-2__item">
           <button class="btn btn--small">
@@ -48,27 +48,27 @@
     </nav>
     <header class="header" id="header">
       <nav class="nav">
-        <a class="nav__logo" href="#header"
-          ><img src="img/logo1.png" alt="logo"
-        /></a>
+        <a class="nav__logo" href="#"><img src="img/logo1.png" alt="logo"/></a>
         <ul class="nav__list">
           <li class="nav__item">
-            <p class="nav__link linkHow-2">Как будет проходить</p>
+            <a href="#how" class="nav__link">Как будет проходить</a>
           </li>
           <li class="nav__item">
-            <p class="nav__link linkWho-2">Кто может участвовать</p>
+            <a href="#who" class="nav__link ">Кто может участвовать</a>
           </li>
           <li class="nav__item">
-            <p class="nav__link linkTar-2">Тарифы</p>
+            <a href="#tariffs" class="nav__link ">Тарифы</a>
           </li>
           <li class="nav__item">
-            <p class="nav__link linkOrg-2">Организаторы</p>
+            <a href="#organizers" class="nav__link ">Организаторы</a>
           </li>
           <li class="nav__item">
-            <p class="nav__link linkCon-2">Контакты</p>
+            <a href="#contacts" class="nav__link ">Контакты</a>
           </li>
           <li class="nav__item">
-            <p class="nav__link nav__link--red" href="#">Участвовать</p>
+            <a href="#" class="nav__link nav__link--red" href="#"
+              >Участвовать</a
+            >
           </li>
         </ul>
       </nav>
@@ -135,7 +135,7 @@
 
     <main class="content">
       <!--Section Start-->
-      <section class="section section--1 how">
+      <section class="section section--1" id="how">
         <div class="section__heading-box">
           <h2 class="heading--section">Как будет проходить?</h2>
           <span
@@ -187,7 +187,7 @@
       </section>
       <!--Section End-->
       <!--Section Start-->
-      <section class="section section--2 who">
+      <section class="section section--2" id="who">
         <div class="section__heading-box">
           <h2 class="heading--section heading--section-white">
             Кто может участвовать?
@@ -356,7 +356,7 @@
       </section>
       <!--Section End-->
       <!--Section Start-->
-      <section class="section section--3 why">
+      <section class="section section--3" id="why">
         <div class="section__heading-box">
           <h2 class="heading--section">Зачем вам нужна Битва скидок?</h2>
           <span
@@ -625,7 +625,7 @@
       </section>
       <!--Section End-->
       <!--Section Start-->
-      <section class="section section--6 tariffs">
+      <section class="section section--6" id="tariffs">
         <div class="section__heading-box">
           <h2 class="heading--section heading--section-black">
             Тарифы
@@ -1066,7 +1066,7 @@
       </section>
       <!--Section End-->
       <!--Section Start-->
-      <section class="section section--8 organizers">
+      <section class="section section--8" id="organizers">
         <div class="section__heading-box">
           <h2 class="heading--section heading--section-black">
             Организаторы проекта
@@ -1227,7 +1227,12 @@
       </p>
     </footer>
     <div class="nav-2__container"></div>
-
+    <!-- scripts -->
+    <!-- Smooth Scroll -->
+    <script src="js/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
+    <!-- Smooth Scroll -->
+    <!-- My Scripts -->
     <script src="js/script.js"></script>
+    <!-- My Scripts -->
   </body>
 </html>

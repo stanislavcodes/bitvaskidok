@@ -112,7 +112,8 @@ body::-webkit-scrollbar-thumb {
   height: 100%;
   width: 100%;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  scroll-behavior: smooth; }
 
 .section {
   padding: 11rem 37.5rem 0 37.5rem; }
