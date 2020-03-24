@@ -1,4 +1,15 @@
 .btn {
+  border: none;
+  border-radius: 1rem;
+  background-color: #d60505;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+
+  &--small {
+    width: 13rem;
+    height: 4rem;
+  }
+
   &--main {
     a {
       font-family: $gpBold;
@@ -9,14 +20,9 @@
       color: #fff;
     }
 
-    border: none;
-    border-radius: 1rem;
     align-self: center;
     width: 23rem;
     height: 6rem;
-    background-color: #d60505;
-    cursor: pointer;
-    transition: all 100ms ease-in-out;
 
     &:hover {
       background-color: #ad0000;
@@ -24,37 +30,12 @@
   }
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 3rem;
-
-  &__list {
-    list-style: none;
-    display: flex;
-    align-items: center;
-  }
-
-  &__item {
-    &:not(:last-child) {
-      margin-right: 2rem;
-    }
-  }
-
-  &__link {
-    text-decoration: none;
-    font-size: 1.4rem;
-    color: #000;
-
-    &--red {
-      color: #d60505;
-      font-family: $gpBold;
-    }
-  }
-}
-
 .content {
+  height: 100%;
   width: 100%;
+  // z-index: 2000;
+  position: relative;
+  overflow: hidden;
 }
 
 .section {
@@ -350,44 +331,6 @@
     }
   }
 
-  .parallax-2 {
-    &__container {
-      position: absolute;
-      top: -11rem;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background: url(../img/parallax-2/parallax-2_bg.png);
-      background-size: 100%;
-      @include flex-center;
-      // display: none;
-    }
-
-    position: relative;
-    width: 100%;
-    height: 100%;
-    @include flex-center;
-
-    & > div {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 3;
-      @include flex-center;
-      flex-direction: column;
-      //background-size: 55%;
-    }
-
-    & > div:nth-child(3) {
-      padding-top: 20rem;
-      justify-content: flex-start;
-    }
-  }
-
   &--5 {
     height: 67rem;
     background: url(../img/5/bg-5.png) center no-repeat;
@@ -555,7 +498,8 @@
       background-color: #fff;
       padding: 0 3rem;
       cursor: pointer;
-      transition: all ease-in-out 1s;
+      z-index: 100;
+      transition: height 0.4s;
 
       &:not(:last-child) {
         border-bottom: 1px solid #e1ebf5;
@@ -566,7 +510,6 @@
         width: 100rem;
         flex-direction: column;
         margin-top: 10rem;
-        transition: height ease-in-out 1s;
       }
 
       &__name {
@@ -577,6 +520,7 @@
       &__icon {
         width: 3rem;
         height: 1.7rem;
+        transition: all 0.3s ease-in-out;
 
         &--closed {
           fill: #e2ecf5;
@@ -587,27 +531,21 @@
 
     .answer {
       width: 100%;
-      height: 100%;
+      height: 0;
       @include flex-center;
       background-color: #e2ecf5;
-      padding: 3rem;
-      // display: none;
-      transition: all ease-in-out 1s;
+      z-index: 10;
+      overflow: hidden;
+      transition: height 0.4s, padding-top 0.4s, padding-bottom 0.4s,
+        padding-left 0s, padding-right 0s;
 
       &__text {
+        display: block;
         font-family: $gpLight;
         font-size: 1.8rem;
-      }
-
-      &--closed {
-        height: 0;
-        display: none;
-        transition: height ease-in-out 1s;
-
-        .answer__text {
-          font-size: 0;
-          transition: all ease-in-out 1s;
-        }
+        transform-origin: top;
+        z-index: 10;
+        transition: all 0.4s 0.4s;
       }
     }
   }
@@ -749,42 +687,6 @@
         margin-top: 2rem;
       }
     }
-
-    .parallax-3 {
-      &__container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        @include flex-center;
-        // display: none;
-        z-index: -1;
-      }
-
-      position: relative;
-      width: 100%;
-      height: 100%;
-      @include flex-center;
-
-      & > div {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 3;
-        @include flex-center;
-        flex-direction: column;
-      }
-
-      & > div:nth-child(3) {
-        // padding-top: 20rem;
-        justify-content: flex-start;
-      }
-    }
   }
 }
 
@@ -814,5 +716,21 @@
     span {
       font-family: $gpBold;
     }
+  }
+}
+
+.question:hover ~ .asnwer {
+  animation: answerSlide 1s;
+  display: block;
+}
+@keyframes answerSlide {
+  0% {
+    height: 0;
+  }
+  80% {
+    height: 110%;
+  }
+  0% {
+    height: 100%;
   }
 }

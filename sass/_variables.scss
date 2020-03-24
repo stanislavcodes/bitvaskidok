@@ -5,7 +5,24 @@
 }
 
 // fonts
-$gpLight : 'GothLight', sans-serif;
-$gpMedium : 'GothMedium', sans-serif;
-$gpBold : 'GothBold', sans-serif;
-$gpBlack : 'GothBlack', sans-serif;
+$gpLight: "GothLight", sans-serif;
+$gpMedium: "GothMedium", sans-serif;
+$gpBold: "GothBold", sans-serif;
+$gpBlack: "GothBlack", sans-serif;
+
+// Breakpoints
+$breakpoints: (
+  xsmall: 360px,
+  small: 499px,
+  medium: 699px,
+  large: 1029px,
+  xlarge: 1399px
+);
+
+@mixin breakpoint($size) {
+  $breakpoint-value: map-get($breakpoints, $size);
+
+  @media screen and (min-width: $breakpoint-value) {
+    @content;
+  }
+}

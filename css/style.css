@@ -69,12 +69,14 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  width: 100%; }
 
 body {
   box-sizing: inherit;
   width: 100vw;
-  overflow-x: hidden; }
+  height: 100%;
+  position: relative; }
 
 body::-webkit-scrollbar {
   width: 5px;
@@ -83,115 +85,34 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background-color: #979797; }
 
-.header {
-  position: relative;
-  width: 100%;
-  height: 86rem;
-  padding: 0 37.5rem 0 37.5rem;
-  background-image: url(../img/header-bg.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column; }
-  .header__parallax {
-    width: 100%;
-    height: 45rem;
-    display: flex;
-    justify-content: center;
-    z-index: 4; }
-    .header__parallax--container {
-      position: relative;
-      width: 100%;
-      height: 45rem; }
-    .header__parallax > div {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 3;
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-    .header__parallax--small {
-      z-index: 100; }
-  .header__heading-box {
-    z-index: 30;
-    width: 80rem;
-    display: grid;
-    margin: 0 auto;
-    row-gap: 2rem;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, min-content); }
-    .header__heading-box > div {
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-    .header__heading-box--secondary {
-      grid-row: 1 / 2;
-      justify-self: center;
-      width: 35rem;
-      height: 5rem;
-      background-color: #fff; }
-    .header__heading-box--primary {
-      grid-row: 2 / 3; }
-    .header__heading-box--tertiary {
-      grid-row: 3 / 4;
-      justify-self: center;
-      width: 20rem;
-      height: 4.5rem;
-      background-color: #008aff;
-      transform: rotate(-5deg) translateX(10%);
-      box-shadow: 0.5rem 0.5rem 0 #00000056; }
-  .header__info {
-    font-family: "GothMedium", sans-serif;
-    text-align: center;
-    font-size: 1.6rem;
-    line-height: 1.4;
-    margin-bottom: 4.5rem; }
-    .header__info--black {
-      font-family: "GothBlack", sans-serif; }
-
-.btn--main {
+.btn {
   border: none;
   border-radius: 1rem;
-  align-self: center;
-  width: 23rem;
-  height: 6rem;
   background-color: #d60505;
   cursor: pointer;
   transition: all 100ms ease-in-out; }
-  .btn--main a {
-    font-family: "GothBold", sans-serif;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 0.2rem;
-    color: #fff; }
-  .btn--main:hover {
-    background-color: #ad0000; }
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 3rem; }
-  .nav__list {
-    list-style: none;
-    display: flex;
-    align-items: center; }
-  .nav__item:not(:last-child) {
-    margin-right: 2rem; }
-  .nav__link {
-    text-decoration: none;
-    font-size: 1.4rem;
-    color: #000; }
-    .nav__link--red {
-      color: #d60505;
-      font-family: "GothBold", sans-serif; }
+  .btn--small {
+    width: 13rem;
+    height: 4rem; }
+  .btn--main {
+    align-self: center;
+    width: 23rem;
+    height: 6rem; }
+    .btn--main a {
+      font-family: "GothBold", sans-serif;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.2rem;
+      color: #fff; }
+    .btn--main:hover {
+      background-color: #ad0000; }
 
 .content {
-  width: 100%; }
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
 
 .section {
   padding: 11rem 37.5rem 0 37.5rem; }
@@ -406,40 +327,6 @@ body::-webkit-scrollbar-thumb {
         font-size: 1.7rem;
         line-height: 1.4;
         max-width: 51rem; }
-  .section .parallax-2 {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .section .parallax-2__container {
-      position: absolute;
-      top: -11rem;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background: url(../img/parallax-2/parallax-2_bg.png);
-      background-size: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    .section .parallax-2 > div {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 3;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column; }
-    .section .parallax-2 > div:nth-child(3) {
-      padding-top: 20rem;
-      justify-content: flex-start; }
   .section--5 {
     height: 67rem;
     background: url(../img/5/bg-5.png) center no-repeat;
@@ -560,7 +447,8 @@ body::-webkit-scrollbar-thumb {
       background-color: #fff;
       padding: 0 3rem;
       cursor: pointer;
-      transition: all ease-in-out 1s; }
+      z-index: 100;
+      transition: height 0.4s; }
       .section--7 .question:not(:last-child) {
         border-bottom: 1px solid #e1ebf5; }
       .section--7 .questions-box {
@@ -569,36 +457,34 @@ body::-webkit-scrollbar-thumb {
         align-items: center;
         width: 100rem;
         flex-direction: column;
-        margin-top: 10rem;
-        transition: height ease-in-out 1s; }
+        margin-top: 10rem; }
       .section--7 .question__name {
         font-family: "GothBold", sans-serif;
         font-size: 2.6rem; }
       .section--7 .question__icon {
         width: 3rem;
-        height: 1.7rem; }
+        height: 1.7rem;
+        transition: all 0.3s ease-in-out; }
         .section--7 .question__icon--closed {
           fill: #e2ecf5;
           transform: rotate(180deg); }
     .section--7 .answer {
       width: 100%;
-      height: 100%;
+      height: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: #e2ecf5;
-      padding: 3rem;
-      transition: all ease-in-out 1s; }
+      z-index: 10;
+      overflow: hidden;
+      transition: height 0.4s, padding-top 0.4s, padding-bottom 0.4s, padding-left 0s, padding-right 0s; }
       .section--7 .answer__text {
+        display: block;
         font-family: "GothLight", sans-serif;
-        font-size: 1.8rem; }
-      .section--7 .answer--closed {
-        height: 0;
-        display: none;
-        transition: height ease-in-out 1s; }
-        .section--7 .answer--closed .answer__text {
-          font-size: 0;
-          transition: all ease-in-out 1s; }
+        font-size: 1.8rem;
+        transform-origin: top;
+        z-index: 10;
+        transition: all 0.4s 0.4s; }
   .section--8 {
     height: 165rem;
     position: relative; }
@@ -696,38 +582,6 @@ body::-webkit-scrollbar-thumb {
         grid-column: 2 / 3;
         grid-row: 4 / 5;
         margin-top: 2rem; }
-    .section--8 .parallax-3 {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .section--8 .parallax-3__container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: -1; }
-      .section--8 .parallax-3 > div {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; }
-      .section--8 .parallax-3 > div:nth-child(3) {
-        justify-content: flex-start; }
 
 .footer {
   width: 100%;
@@ -749,3 +603,193 @@ body::-webkit-scrollbar-thumb {
     line-height: 1.4; }
     .footer__copy span {
       font-family: "GothBold", sans-serif; }
+
+.question:hover ~ .asnwer {
+  animation: answerSlide 1s;
+  display: block; }
+
+@keyframes answerSlide {
+  0% {
+    height: 0; }
+  80% {
+    height: 110%; }
+  0% {
+    height: 100%; } }
+
+.header__parallax {
+  width: 100%;
+  height: 45rem;
+  display: flex;
+  justify-content: center;
+  z-index: 4; }
+  .header__parallax--container {
+    position: relative;
+    width: 100%;
+    height: 45rem; }
+  .header__parallax > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .header__parallax--small {
+    z-index: 100; }
+
+.parallax-2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .parallax-2__container {
+    position: absolute;
+    top: -11rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/parallax-2/parallax-2_bg.png) center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .parallax-2 > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  .parallax-2 > div:nth-child(3) {
+    padding-top: 20rem;
+    justify-content: flex-start; }
+
+.parallax-3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .parallax-3__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1; }
+  .parallax-3 > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  .parallax-3 > div:nth-child(3) {
+    justify-content: flex-start; }
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 86rem;
+  padding: 0 37.5rem 0 37.5rem;
+  background-image: url(../img/header-bg.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 8000; }
+  .header__heading-box {
+    z-index: 30;
+    width: 80rem;
+    display: grid;
+    margin: 0 auto;
+    row-gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content); }
+    .header__heading-box > div {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .header__heading-box--secondary {
+      grid-row: 1 / 2;
+      justify-self: center;
+      width: 35rem;
+      height: 5rem;
+      background-color: #fff; }
+    .header__heading-box--primary {
+      grid-row: 2 / 3; }
+    .header__heading-box--tertiary {
+      grid-row: 3 / 4;
+      justify-self: center;
+      width: 20rem;
+      height: 4.5rem;
+      background-color: #008aff;
+      transform: rotate(-5deg) translateX(10%);
+      box-shadow: 0.5rem 0.5rem 0 #00000056; }
+  .header__info {
+    font-family: "GothMedium", sans-serif;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    margin-bottom: 4.5rem; }
+    .header__info--black {
+      font-family: "GothBlack", sans-serif; }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem; }
+  .nav__list {
+    list-style: none;
+    display: flex;
+    align-items: center; }
+  .nav__item:not(:last-child) {
+    margin-right: 2rem; }
+  .nav__link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #000;
+    cursor: pointer; }
+    .nav__link--red {
+      color: #d60505;
+      font-family: "GothBold", sans-serif; }
+
+.nav-2 {
+  background-color: #fff;
+  height: 7.5rem;
+  padding: 0 37.5rem;
+  margin: 0;
+  align-items: center;
+  z-index: 10000;
+  display: none;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0; }
+  .nav-2__link {
+    font-family: "GothMedium", sans-serif;
+    font-size: 1.4rem; }
+    .nav-2__link--btn {
+      color: #fff; }

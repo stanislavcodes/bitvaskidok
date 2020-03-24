@@ -9,22 +9,66 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <nav class="nav nav-2" id="nav2">
+      <a class="nav__logo nav-2__logo" href="#header"
+        ><img src="img/logo.png" alt="logo"
+      /></a>
+      <ul class="nav__list nav-2__list">
+        <li class="nav__item nav-2__item">
+          <p class="nav__link nav-2__link linkHow">
+            Как будет проходить
+          </p>
+        </li>
+        <li class="nav__item nav-2__item">
+          <p class="nav__link nav-2__link linkWho">
+            Кто может участвовать
+          </p>
+        </li>
+        <li class="nav__item nav-2__item">
+          <p class="nav__link nav-2__link linkTar">Тарифы</p>
+        </li>
+        <li class="nav__item nav-2__item">
+          <p class="nav__link nav-2__link linkOrg">
+            Организаторы
+          </p>
+        </li>
+        <li class="nav__item">
+          <p class="nav__link nav-2__link linkCon">
+            Контакты
+          </p>
+        </li>
+        <li class="nav__item nav-2__item">
+          <button class="btn btn--small">
+            <a class="nav__link nav-2__link nav-2__link--btn" href="#"
+              >Участвовать</a
+            >
+          </button>
+        </li>
+      </ul>
+    </nav>
     <header class="header" id="header">
       <nav class="nav">
-        <a class="nav__logo" href="#"><img src="img/logo1.png" alt="logo"/></a>
+        <a class="nav__logo" href="#header"
+          ><img src="img/logo1.png" alt="logo"
+        /></a>
         <ul class="nav__list">
           <li class="nav__item">
-            <a class="nav__link" href="#">Как будет проходить</a>
+            <p class="nav__link linkHow-2">Как будет проходить</p>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">Кто может участвовать</a>
-          </li>
-          <li class="nav__item"><a class="nav__link" href="#">Тарифы</a></li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">Организаторы</a>
+            <p class="nav__link linkWho-2">Кто может участвовать</p>
           </li>
           <li class="nav__item">
-            <a class="nav__link nav__link--red" href="#">Участвовать</a>
+            <p class="nav__link linkTar-2">Тарифы</p>
+          </li>
+          <li class="nav__item">
+            <p class="nav__link linkOrg-2">Организаторы</p>
+          </li>
+          <li class="nav__item">
+            <p class="nav__link linkCon-2">Контакты</p>
+          </li>
+          <li class="nav__item">
+            <p class="nav__link nav__link--red" href="#">Участвовать</p>
           </li>
         </ul>
       </nav>
@@ -91,7 +135,7 @@
 
     <main class="content">
       <!--Section Start-->
-      <section class="section section--1">
+      <section class="section section--1 how">
         <div class="section__heading-box">
           <h2 class="heading--section">Как будет проходить?</h2>
           <span
@@ -143,7 +187,7 @@
       </section>
       <!--Section End-->
       <!--Section Start-->
-      <section class="section section--2">
+      <section class="section section--2 who">
         <div class="section__heading-box">
           <h2 class="heading--section heading--section-white">
             Кто может участвовать?
@@ -312,7 +356,7 @@
       </section>
       <!--Section End-->
       <!--Section Start-->
-      <section class="section section--3">
+      <section class="section section--3 why">
         <div class="section__heading-box">
           <h2 class="heading--section">Зачем вам нужна Битва скидок?</h2>
           <span
@@ -581,7 +625,7 @@
       </section>
       <!--Section End-->
       <!--Section Start-->
-      <section class="section section--6">
+      <section class="section section--6 tariffs">
         <div class="section__heading-box">
           <h2 class="heading--section heading--section-black">
             Тарифы
@@ -1022,7 +1066,7 @@
       </section>
       <!--Section End-->
       <!--Section Start-->
-      <section class="section section--8">
+      <section class="section section--8 organizers">
         <div class="section__heading-box">
           <h2 class="heading--section heading--section-black">
             Организаторы проекта
@@ -1173,14 +1217,17 @@
       </section>
       <!--Section End-->
     </main>
+
     <footer class="footer">
       <a href="tel:+73517506729" class="footer__link">+7 (351) 750-67-29</a>
-      <img src="img/logo1.png" alt="logo" class="footer__logo">
+      <img src="img/logo1.png" alt="logo" class="footer__logo" />
       <p class="footer__copy text-center">
-        2016 &copy; Bitva Skidok. All rights reserved. <br>
-        Made with ❤️ by <span>Stanislav Korchevskyi</span> 
+        2016 &copy; Bitva Skidok. All rights reserved. <br />
+        Made with ❤️ by <span>Stanislav Korchevskyi</span>
       </p>
     </footer>
+    <div class="nav-2__container"></div>
+
     <script src="js/script.js"></script>
   </body>
 </html>
