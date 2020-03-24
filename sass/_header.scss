@@ -6,7 +6,7 @@
   background-image: url(../img/header-bg.png);
   background-size: 100%;
   background-repeat: no-repeat;
-  overflow-x: hidden;
+  overflow: hidden;
 
   display: flex;
   flex-direction: column;
@@ -87,6 +87,11 @@
     &--red {
       color: #d60505;
       font-family: $gpBold;
+      transition: border-bottom .5s ease-in-out;
+
+      &:hover {
+        border-bottom: 0.1rem solid #ad0000;
+      }
     }
   }
 }

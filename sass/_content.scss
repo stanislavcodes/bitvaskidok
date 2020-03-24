@@ -8,6 +8,10 @@
   &--small {
     width: 13rem;
     height: 4rem;
+
+    &:hover {
+      background-color: #ad0000;
+    }
   }
 
   &--main {
@@ -36,7 +40,6 @@
   // z-index: 2000;
   position: relative;
   overflow: hidden;
-  scroll-behavior: smooth;
 }
 
 .section {
@@ -254,17 +257,35 @@
       }
     }
     .pin {
-      width: 62px;
-      height: 86px;
+      width: 6.2rem;
+      height: 8.6rem;
+      // display: none;
+
+      // @include breakpointMin(xxlarge) {
+      //   width: 6.2rem;
+      //   height: 8.6rem;
+      // }
 
       &-1 {
         margin: 6rem 0 0 31.6rem;
+
+        @include breakpointMin(xxlarge) {
+          margin: 16rem 0 0 40.5rem;
+        }
       }
       &-2 {
         margin: 11.4rem 62.9rem 0 0;
+
+        @include breakpointMin(xxlarge) {
+          margin: 10.7rem 63.6rem 0 0;
+        }
       }
       &-3 {
         margin: 18rem 0 0 45.9rem;
+
+        @include breakpointMin(xxlarge) {
+          margin: -2rem 0 0 51rem;
+        }
       }
     }
     .row {
@@ -695,6 +716,7 @@
   width: 100%;
   height: 22rem;
   background-color: #ffd52a;
+  overflow: hidden;
 
   @include flex-center;
   flex-direction: column;

@@ -12,14 +12,23 @@ $gpBlack: "GothBlack", sans-serif;
 
 // Breakpoints
 $breakpoints: (
-  xsmall: 360px,
+  xsmall: 359px,
   small: 499px,
   medium: 699px,
   large: 1029px,
-  xlarge: 1399px
+  xlarge: 1399px,
+  xxlarge: 2099px
+  
 );
 
-@mixin breakpoint($size) {
+@mixin breakpointMax($size) {
+  $breakpoint-value: map-get($breakpoints, $size);
+
+  @media screen and (max-width: $breakpoint-value) {
+    @content;
+  }
+}
+@mixin breakpointMin($size) {
   $breakpoint-value: map-get($breakpoints, $size);
 
   @media screen and (min-width: $breakpoint-value) {

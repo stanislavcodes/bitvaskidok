@@ -1,3 +1,33 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-size: 62.5%;
+  width: 100vw; }
+  @media screen and (min-width: 2099px) {
+    html {
+      font-size: 85%; } }
+
+body {
+  box-sizing: inherit;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+body::-webkit-scrollbar {
+  width: 5px;
+  background: transparent; }
+
+body::-webkit-scrollbar-thumb {
+  background-color: #979797; }
+
 @font-face {
   font-family: "GothLight";
   src: url("../css/fonts/GothamPro-Light.eot");
@@ -58,33 +88,6 @@ body {
 .text-center {
   text-align: center; }
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
-html {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-  font-size: 62.5%;
-  width: 100%; }
-
-body {
-  box-sizing: inherit;
-  width: 100vw;
-  height: 100%;
-  position: relative; }
-
-body::-webkit-scrollbar {
-  width: 5px;
-  background: transparent; }
-
-body::-webkit-scrollbar-thumb {
-  background-color: #979797; }
-
 .btn {
   border: none;
   border-radius: 1rem;
@@ -94,6 +97,8 @@ body::-webkit-scrollbar-thumb {
   .btn--small {
     width: 13rem;
     height: 4rem; }
+    .btn--small:hover {
+      background-color: #ad0000; }
   .btn--main {
     align-self: center;
     width: 23rem;
@@ -112,8 +117,7 @@ body::-webkit-scrollbar-thumb {
   height: 100%;
   width: 100%;
   position: relative;
-  overflow: hidden;
-  scroll-behavior: smooth; }
+  overflow: hidden; }
 
 .section {
   padding: 11rem 37.5rem 0 37.5rem; }
@@ -276,14 +280,23 @@ body::-webkit-scrollbar-thumb {
         left: 50%;
         transform: translate(-50%, -50%); }
     .section--4 .pin {
-      width: 62px;
-      height: 86px; }
+      width: 6.2rem;
+      height: 8.6rem; }
       .section--4 .pin-1 {
         margin: 6rem 0 0 31.6rem; }
+        @media screen and (min-width: 2099px) {
+          .section--4 .pin-1 {
+            margin: 16rem 0 0 40.5rem; } }
       .section--4 .pin-2 {
         margin: 11.4rem 62.9rem 0 0; }
+        @media screen and (min-width: 2099px) {
+          .section--4 .pin-2 {
+            margin: 10.7rem 63.6rem 0 0; } }
       .section--4 .pin-3 {
         margin: 18rem 0 0 45.9rem; }
+        @media screen and (min-width: 2099px) {
+          .section--4 .pin-3 {
+            margin: -2rem 0 0 51rem; } }
     .section--4 .row {
       display: grid;
       grid-template-rows: 1fr; }
@@ -588,6 +601,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   height: 22rem;
   background-color: #ffd52a;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -638,6 +652,9 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     align-items: center;
     justify-content: center; }
+    .header__parallax > div > img {
+      width: 100%;
+      height: 100%; }
   .header__parallax--small {
     z-index: 100; }
 
@@ -660,7 +677,8 @@ body::-webkit-scrollbar-thumb {
     background-size: 100%;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    display: none; }
   .parallax-2 > div {
     width: 100%;
     height: 100%;
@@ -673,6 +691,9 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     align-items: center;
     flex-direction: column; }
+    .parallax-2 > div > img {
+      width: 100%;
+      height: 100%; }
   .parallax-2 > div:nth-child(3) {
     padding-top: 20rem;
     justify-content: flex-start; }
@@ -707,6 +728,9 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     align-items: center;
     flex-direction: column; }
+    .parallax-3 > div > img {
+      width: 100%;
+      height: 100%; }
   .parallax-3 > div:nth-child(3) {
     justify-content: flex-start; }
 
@@ -718,7 +742,7 @@ body::-webkit-scrollbar-thumb {
   background-image: url(../img/header-bg.png);
   background-size: 100%;
   background-repeat: no-repeat;
-  overflow-x: hidden;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   z-index: 8000; }
@@ -776,7 +800,10 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer; }
     .nav__link--red {
       color: #d60505;
-      font-family: "GothBold", sans-serif; }
+      font-family: "GothBold", sans-serif;
+      transition: border-bottom .5s ease-in-out; }
+      .nav__link--red:hover {
+        border-bottom: 0.1rem solid #ad0000; }
 
 .nav-2 {
   background-color: #fff;

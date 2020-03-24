@@ -11,13 +11,29 @@ html {
   padding: 0;
   box-sizing: inherit;
   font-size: 62.5%;
-  width: 100%;
-  // overflow-x: hidden
+  width: 100vw;
+
+  // @include breakpointMax(xsmall) {
+  //   font-size: 50%; // 1 rem = 8px, 8/16 = 0.5*100% = 50%
+  // }
+
+  // @include breakpointMax(small) {
+  //   font-size: 50%; // 1 rem = 8px, 8/16 = 0.5*100% = 50%
+  // }
+
+  // @include breakpointMax(medium) {
+  //   font-size: 56.25%; // 1 rem = 9px, 9/16 = 0.5625*100% = 56.25%
+  // }
+
+  @include breakpointMin(xxlarge) {
+    font-size: 85%; // 1 rem = 12px, 12/16 = 0.75*100% = 75%
+  }
+
 }
 
 body {
   box-sizing: inherit;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   position: relative;
 }
