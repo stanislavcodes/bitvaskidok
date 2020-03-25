@@ -11,6 +11,9 @@ html {
   box-sizing: inherit;
   font-size: 62.5%;
   width: 100vw; }
+  @media screen and (max-width: 1399px) {
+    html {
+      font-size: 45%; } }
   @media screen and (min-width: 2099px) {
     html {
       font-size: 85%; } }
@@ -581,7 +584,13 @@ body {
     font-size: 1.6rem;
     font-family: "GothMedium", sans-serif; }
   .footer__logo {
-    margin: 2rem 0 3rem 0; }
+    margin: 2rem 0 3rem 0;
+    width: 17rem;
+    height: 7.5rem; }
+    @media screen and (max-width: 1399px) {
+      .footer__logo {
+        width: 14rem;
+        height: 6rem; } }
   .footer__copy {
     line-height: 1.4; }
     .footer__copy span {
@@ -754,6 +763,8 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 3rem; }
+  .nav__logo img {
+    width: 80%; }
   .nav__list {
     list-style: none;
     display: flex;
@@ -768,7 +779,7 @@ body {
     .nav__link--red {
       color: #d60505;
       font-family: "GothBold", sans-serif;
-      transition: border-bottom .5s ease-in-out; }
+      transition: border-bottom 0.5s ease-in-out; }
       .nav__link--red:hover {
         border-bottom: 0.1rem solid #ad0000; }
 
@@ -783,6 +794,8 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 0; }
+  .nav-2__logo img {
+    width: 80%; }
   .nav-2__link {
     font-family: "GothMedium", sans-serif;
     font-size: 1.4rem; }

@@ -25,10 +25,12 @@ html {
   //   font-size: 56.25%; // 1 rem = 9px, 9/16 = 0.5625*100% = 56.25%
   // }
 
-  @include breakpointMin(xxlarge) {
-    font-size: 85%; // 1 rem = 12px, 12/16 = 0.75*100% = 75%
+  @include breakpointMax(xlarge) {
+    font-size: 45%;
   }
-
+  @include breakpointMin(xxlarge) {
+    font-size: 85%;
+  }
 }
 
 body {

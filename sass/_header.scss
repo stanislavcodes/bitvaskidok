@@ -66,6 +66,12 @@
   justify-content: space-between;
   margin-bottom: 3rem;
 
+  &__logo {
+    img {
+      width: 80%;
+    }
+  }
+
   &__list {
     list-style: none;
     display: flex;
@@ -87,7 +93,7 @@
     &--red {
       color: #d60505;
       font-family: $gpBold;
-      transition: border-bottom .5s ease-in-out;
+      transition: border-bottom 0.5s ease-in-out;
 
       &:hover {
         border-bottom: 0.1rem solid #ad0000;
@@ -111,6 +117,12 @@
   top: 0;
   // left: 0;
   // right: 0;
+
+  &__logo {
+    img {
+      width: 80%;
+    }
+  }
 
   &__link {
     font-family: $gpMedium;

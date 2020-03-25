@@ -679,6 +679,13 @@
 
   &__logo {
     margin: 2rem 0 3rem 0;
+    width: 17rem;
+    height: 7.5rem;
+
+    @include breakpointMax(xlarge) {
+      width: 14rem;
+      height: 6rem;
+    }
   }
 
   &__copy {
