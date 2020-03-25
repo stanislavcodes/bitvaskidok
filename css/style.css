@@ -6,11 +6,8 @@
   box-sizing: border-box; }
 
 html {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-  font-size: 62.5%;
-  width: 100vw; }
+  box-sizing: border-box;
+  font-size: 62.5%; }
   @media screen and (max-width: 1399px) {
     html {
       font-size: 45%; } }
@@ -19,9 +16,7 @@ html {
       font-size: 85%; } }
 
 body {
-  box-sizing: inherit;
-  width: 100%;
-  height: 100%;
+  box-sizing: border-box;
   position: relative; }
 
 body::-webkit-scrollbar {
@@ -106,7 +101,8 @@ body {
     align-self: center;
     width: 23rem;
     height: 6rem; }
-    .btn--main a {
+    .btn--main a,
+    .btn--main p {
       font-family: "GothBold", sans-serif;
       font-size: 1.6rem;
       text-transform: uppercase;
@@ -117,13 +113,15 @@ body {
       background-color: #ad0000; }
 
 .content {
-  height: 100%;
   width: 100%;
   position: relative;
   overflow: hidden; }
 
 .section {
-  padding: 11rem 37.5rem 0 37.5rem; }
+  padding: 11rem 37.5rem 11rem 37.5rem; }
+  @media screen and (max-width: 1399px) {
+    .section {
+      padding: 11rem 27.5rem 11rem 27.5rem; } }
   .section__heading-box {
     position: relative;
     display: flex;
@@ -141,27 +139,34 @@ body {
       background-color: #32b228; }
     .section__highlighter--white {
       background-color: #ffffff; }
-  .section--1 {
-    height: 80rem; }
-    .section--1__info-box {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 1fr;
-      margin-top: 7.5rem;
-      justify-items: center; }
-      .section--1__info-box > div {
-        max-width: 30rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center; }
-        .section--1__info-box > div p {
-          text-align: center;
-          line-height: 1.4; }
-        .section--1__info-box > div h5 {
-          margin: 3rem 0 2.5rem 0; }
-      .section--1__info-box .progress-bar {
-        width: 13rem;
-        height: 13rem; }
+  .section--1__link {
+    font-size: 1.5rem;
+    font-family: "GothMedium", sans-serif;
+    letter-spacing: 0.035rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #000000;
+    cursor: pointer; }
+  .section--1__info-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    margin-top: 7.5rem;
+    justify-items: center; }
+    .section--1__info-box > div {
+      max-width: 30rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .section--1__info-box > div p {
+        text-align: center;
+        line-height: 1.4; }
+      .section--1__info-box > div h5 {
+        margin: 3rem 0 2.5rem 0; }
+    .section--1__info-box .progress-bar {
+      width: 13rem;
+      height: 13rem; }
   .section--2 {
     height: 110rem;
     width: 100%;
@@ -263,7 +268,7 @@ body {
       box-shadow: 0.5rem 0.5rem 0 #00000056; }
     .section--4__big-txt {
       font-family: "GothBlack", sans-serif;
-      font-size: 60px;
+      font-size: 6rem;
       margin-top: 2rem;
       color: #fff; }
     .section--4 .road {
@@ -527,46 +532,95 @@ body {
           text-decoration: none;
           border: none;
           margin: 3rem 0 5rem 0; }
-    .section--8 .form {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, min-content);
-      row-gap: 3rem;
-      column-gap: 3rem;
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, min-content);
+  row-gap: 3rem;
+  column-gap: 3rem;
+  font-family: "GothLight", sans-serif; }
+  .form textarea {
+    resize: none;
+    grid-column: 1 / 4;
+    width: 100%;
+    height: 19rem;
+    border: 0.4rem solid #e8e8e8;
+    padding: 2rem;
+    font-size: 1.5rem; }
+    .form textarea::placeholder {
       font-family: "GothLight", sans-serif; }
-      .section--8 .form .input {
-        height: 5rem;
-        border: 0.4rem solid #e8e8e8;
-        padding: 2rem;
-        font-size: 1.5rem; }
-        .section--8 .form .input::placeholder {
-          font-family: "GothLight", sans-serif; }
-        .section--8 .form .input--big {
-          width: 87rem;
-          grid-column: 1 / 4; }
-        .section--8 .form .input--small {
-          width: 27rem; }
-      .section--8 .form textarea {
-        resize: none;
-        grid-column: 1 / 4;
-        width: 100%;
-        height: 19rem;
-        border: 0.4rem solid #e8e8e8;
-        padding: 2rem;
-        font-size: 1.5rem; }
-        .section--8 .form textarea::placeholder {
-          font-family: "GothLight", sans-serif; }
-      .section--8 .form--btn {
-        font-family: "GothBold", sans-serif;
-        font-size: 1.6rem;
-        text-transform: uppercase;
-        text-decoration: none;
-        letter-spacing: 0.2rem;
-        color: #fff;
-        justify-self: center;
-        grid-column: 2 / 3;
-        grid-row: 4 / 5;
-        margin-top: 2rem; }
+  .form--btn {
+    font-family: "GothBold", sans-serif;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+    color: #fff;
+    justify-self: center;
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    margin-top: 2rem; }
+
+.input {
+  height: 5rem;
+  border: 0.4rem solid #e8e8e8;
+  padding: 2rem;
+  font-size: 1.5rem; }
+  .input::placeholder {
+    font-family: "GothLight", sans-serif; }
+  .input--big {
+    width: 87rem;
+    grid-column: 1 / 4; }
+  .input--small {
+    width: 27rem; }
+
+.popup {
+  width: 50rem;
+  height: 60rem;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem min-content 1fr; }
+  .popup__container {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 11000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.281);
+    display: none; }
+  .popup .close {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2rem;
+    cursor: pointer; }
+    .popup .close-icon {
+      width: 2rem;
+      height: 2rem; }
+  .popup h5 {
+    font-family: "GothBold", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem; }
+  .popup p {
+    font-family: "GothMedium", sans-serif; }
+  .popup__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .popup__input {
+    width: 35rem;
+    margin-top: 0;
+    margin-bottom: 2rem; }
 
 .footer {
   width: 100%;
@@ -713,8 +767,7 @@ body {
 .header {
   position: relative;
   width: 100%;
-  height: 86rem;
-  padding: 0 37.5rem 0 37.5rem;
+  padding: 0 37.5rem 10rem 37.5rem;
   background-image: url(../img/header-bg.png);
   background-size: 100%;
   background-repeat: no-repeat;

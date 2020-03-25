@@ -38,9 +38,9 @@
           </a>
         </li>
         <li class="nav__item nav-2__item">
-          <button class="btn btn--small">
-            <a class="nav__link nav-2__link nav-2__link--btn" href="#"
-              >Участвовать</a
+          <button class="btn btn--small cta-popup">
+            <p class="nav__link nav-2__link nav-2__link--btn"
+              >Участвовать</p
             >
           </button>
         </li>
@@ -66,8 +66,8 @@
             <a href="#contacts" class="nav__link ">Контакты</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link nav__link--red" href="#"
-              >Участвовать</a
+            <p  href="#" class="nav__link nav__link--red cta-popup"
+              >Участвовать</p
             >
           </li>
         </ul>
@@ -130,7 +130,7 @@
         города и области.
       </p>
 
-      <button class="btn btn--main"><a href="#">Участвовать</a></button>
+      <button class="btn btn--main cta-popup"><p>Участвовать</p></button>
     </header>
 
     <main class="content">
@@ -157,6 +157,9 @@
               скидочные предложения на свои<br />
               товары и услуги.
             </p>
+            <p href="#" class="popup-link section--1__link cta-popup"
+              >Оставить заявку на участие</p
+            >
           </div>
           <div class="column-2">
             <img class="progress-bar" src="img/pb-2.png" alt="progress bar" />
@@ -351,7 +354,7 @@
           <h4 class="heading--cta">
             Станьте частью масштабного городского проекта
           </h4>
-          <button class="btn btn--main"><a href="#">Участвовать</a></button>
+          <button class="btn btn--main cta-popup"><p>Участвовать</p></button>
         </div>
       </section>
       <!--Section End-->
@@ -1217,6 +1220,63 @@
       </section>
       <!--Section End-->
     </main>
+    <!-- popup form -->
+    <div class="popup__container">
+      <div class="popup">
+        <div class="close">
+          <img class="close-icon" src="img/close.svg" alt="close icon" id="close-popup" />
+        </div>
+        <div class="popup__heading-box">
+          <h5 class="text-center">Оставьте заявку</h5>
+          <p class="text-center">и мы свяжемся с вами в течение 24-х часов</p>
+        </div>
+        <form class="popup__form" action="">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Имя"
+            class="input input--small popup__input"
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Email"
+            class="input input--small popup__input"
+          />
+          <input
+            type="tel"
+            id="tel"
+            name="tel"
+            required
+            placeholder="Телефон"
+            maxlength="20"
+            class="input input--small popup__input"
+          />
+          <input
+            type="text"
+            id="name-comp"
+            name="name-comp"
+            required
+            placeholder="Организация"
+            maxlength="100"
+            class="input input--small popup__input"
+          />
+          <input
+            class="form--btn btn btn--main  popup__input"
+            type="button"
+            value="ОТПРАВИТЬ"
+          />
+          <p class="text-center">
+            Ваши контактные данные в безопасности и будут использованы только
+            для связи с Вами.
+          </p>
+        </form>
+      </div>
+    </div>
 
     <footer class="footer">
       <a href="tel:+73517506729" class="footer__link">+7 (351) 750-67-29</a>

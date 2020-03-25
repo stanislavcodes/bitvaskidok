@@ -82,3 +82,18 @@ var scroll = new SmoothScroll('.nav a[href*="#"]', {
 var easeOutQuart = new SmoothScroll('[data-easing="linear"]', {
   easing: "linear"
 });
+
+// popup
+const popupOpen = document.querySelectorAll(".cta-popup");
+const popup = document.querySelector(".popup__container");
+const popupClose = document.getElementById("close-popup");
+
+popupClose.addEventListener("click", function() {
+  popup.style.display = `none`;
+});
+
+for (i = 0; i < popupOpen.length; i++) {
+  popupOpen[i].addEventListener("click", function() {
+    popup.style.display = `flex`;
+  });
+}
