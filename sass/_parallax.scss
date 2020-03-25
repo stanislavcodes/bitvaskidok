@@ -5,6 +5,14 @@
       position: relative;
       width: 100%;
       height: 45rem;
+
+      // @include breakpointMax(xmedium) {
+      //   background-position: 10rem 15rem;
+      //   background: url(../img/parallax-1/parallax-mobile.png);
+      //   background-position: center top;
+      //   background-repeat: no-repeat;
+      //   background-size: cover;
+      // }
     }
 
     width: 100%;
@@ -25,11 +33,21 @@
       align-items: center;
       justify-content: center;
 
+      // @include breakpointMax(xmedium) {
+      //   display: none;
+      // }
+
       & > img {
         width: 100%;
         height: 100%;
       }
     }
+
+    // & > div:nth-child(3) {
+    //   @include breakpointMax(xmedium) {
+    //     display: flex;
+    //   }
+    // }
 
     &--small {
       z-index: 100;
@@ -55,6 +73,10 @@
 
     @include breakpointMax(xmedium) {
       background-position: 10rem 15rem;
+      background: url(../img/parallax-2/parallax-2-bg-mobile.svg);
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   }
 
@@ -81,6 +103,10 @@
     flex-direction: column;
     //background-size: 55%;
 
+    @include breakpointMax(xmedium) {
+      display: none;
+    }
+
     & > img {
       width: 100%;
       height: 100%;
@@ -90,6 +116,10 @@
   & > div:nth-child(3) {
     padding-top: 20rem;
     justify-content: flex-start;
+
+    @include breakpointMax(xmedium) {
+      display: flex;
+    }
   }
 }
 

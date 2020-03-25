@@ -13,9 +13,15 @@ document.addEventListener("scroll", function() {
 });
 
 // parallax
-document.addEventListener("mousemove", parallax);
-document.addEventListener("mouseleave", parallaxDefault);
+
 let layers = document.querySelectorAll(".layer");
+
+function parallaxDefault() {
+  layers.forEach(layer => {
+    layer.style.transition = `all .5s`;
+    layer.style.transform = `translate(0px, 0px)`;
+  });
+}
 
 function parallax(event) {
   layers.forEach(layer => {
@@ -26,12 +32,20 @@ function parallax(event) {
   });
 }
 
-function parallaxDefault() {
-  layers.forEach(layer => {
-    layer.style.transition = `all .5s`;
-    layer.style.transform = `translate(0px, 0px)`;
-  });
+// check to USE parallax or NOT to USE
+function parallaxMediaCheck(x) {
+  if (x.matches) {
+    // If media query matches
+    document.addEventListener("mousemove", parallax);
+  } else {
+    document.addEventListener("mouseleave", parallaxDefault);
+  }
 }
+
+var x = window.matchMedia("(min-width: 1029px)");
+parallaxMediaCheck(x);
+
+
 // creating our arrays
 const questions = document.querySelectorAll(".question");
 const answers = document.querySelectorAll(".answer");

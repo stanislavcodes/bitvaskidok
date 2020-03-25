@@ -131,7 +131,10 @@ body {
       padding: 11rem 35rem; } }
   @media screen and (max-width: 1029px) {
     .section {
-      padding: 8rem 15rem; } }
+      padding: 8rem 16rem; } }
+  @media screen and (max-width: 699px) {
+    .section {
+      padding: 10rem 5rem; } }
   .section__heading-box {
     position: relative;
     display: flex;
@@ -195,6 +198,9 @@ body {
       width: 5rem;
       height: auto;
       margin-bottom: 2rem; }
+      @media screen and (max-width: 699px) {
+        .section--2__icon {
+          margin-bottom: 1rem; } }
     .section--2__names {
       font-family: "GothMedium", sans-serif;
       font-size: 1.6rem;
@@ -202,15 +208,23 @@ body {
       text-align: center; }
     .section--2__grid {
       width: 100%;
-      height: 55rem;
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: repeat(3, 1fr); }
+      @media screen and (max-width: 699px) {
+        .section--2__grid {
+          row-gap: 1rem;
+          column-gap: 1rem;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(3, 1fr); } }
       .section--2__grid--item {
         flex-direction: column;
         display: flex;
         justify-content: center;
         align-items: center; }
+        @media screen and (max-width: 699px) {
+          .section--2__grid--item17 {
+            grid-column: 2 / 3; } }
   .section--3 {
     width: 100%; }
     .section--3__info-box {
@@ -246,7 +260,6 @@ body {
       height: auto; }
     .section--3__grid {
       width: 100%;
-      height: 40rem;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: 1fr; }
@@ -344,14 +357,26 @@ body {
     align-items: center;
     justify-content: flex-start;
     flex-direction: column; }
+    .section--5__info-box {
+      width: 100%; }
     .section--5__paragraph {
       font-size: 1.6rem;
       text-align: center;
       margin: 3.5rem 0 6.5rem 0; }
     .section--5__grid {
+      width: 100%;
       display: grid;
       column-gap: 4.5rem;
-      grid-template-columns: repeat(7, min-content); }
+      grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); }
+      @media screen and (max-width: 699px) {
+        .section--5__grid {
+          column-gap: 2rem;
+          row-gap: 2rem; } }
+      .section--5__grid--item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
     .section--5__icon {
       width: 5rem;
       height: 5rem; }
@@ -361,8 +386,7 @@ body {
         background-color: #fff;
         display: flex;
         justify-content: center;
-        align-items: center;
-        flex-direction: column; }
+        align-items: center; }
       .section--5__icon-name {
         text-align: center;
         font-size: 1.6rem;
@@ -741,7 +765,11 @@ body {
     align-items: center; }
     @media screen and (max-width: 899px) {
       .parallax-2__container {
-        background-position: 10rem 15rem; } }
+        background-position: 10rem 15rem;
+        background: url(../img/parallax-2/parallax-2-bg-mobile.svg);
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover; } }
   @media screen and (max-width: 899px) {
     .parallax-2--bg {
       padding-top: 15rem; } }
@@ -757,12 +785,18 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column; }
+    @media screen and (max-width: 899px) {
+      .parallax-2 > div {
+        display: none; } }
     .parallax-2 > div > img {
       width: 100%;
       height: 100%; }
   .parallax-2 > div:nth-child(3) {
     padding-top: 20rem;
     justify-content: flex-start; }
+    @media screen and (max-width: 899px) {
+      .parallax-2 > div:nth-child(3) {
+        display: flex; } }
 
 .parallax-3 {
   position: relative;
@@ -870,6 +904,9 @@ body {
     list-style: none;
     display: flex;
     align-items: center; }
+    @media screen and (max-width: null) {
+      .nav__list {
+        display: none; } }
   .nav__item:not(:last-child) {
     margin-right: 2rem; }
   .nav__link {

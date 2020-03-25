@@ -93,6 +93,10 @@
     list-style: none;
     display: flex;
     align-items: center;
+
+    @include breakpointMax(mediuum) {
+      display: none;
+    }
   }
 
   &__item {
