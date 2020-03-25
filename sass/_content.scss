@@ -45,9 +45,12 @@
 .section {
   padding: 11rem 37.5rem 11rem 37.5rem;
 
-  @include breakpointMax(xlarge) {
-    padding: 11rem 27.5rem 11rem 27.5rem;
+  @include breakpointMax(xxlarge) {
+    padding: 11rem 35rem;
   }
+  // @include breakpointMax(xlarge) {
+  //   padding: 10rem 30rem;
+  // }
 
   &__heading-box {
     position: relative;

@@ -23,10 +23,13 @@ html {
   //   font-size: 56.25%; // 1 rem = 9px, 9/16 = 0.5625*100% = 56.25%
   // }
 
+  @include breakpointMax(xxlarge) {
+    font-size: 55%;
+  }
   @include breakpointMax(xlarge) {
     font-size: 45%;
   }
-  @include breakpointMin(xxlarge) {
+  @include breakpointMin(xxxlarge) {
     font-size: 85%;
   }
 }
@@ -34,6 +37,7 @@ html {
 body {
   box-sizing: border-box;
   position: relative;
+  background-color: #fff;
   // width: 100vw;
 }
 body::-webkit-scrollbar {
