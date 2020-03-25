@@ -203,7 +203,7 @@ body {
       align-items: center;
       margin-top: 5rem; }
       .section--3__info-box h4 {
-        margin: 9rem 0 3.5rem 0; }
+        margin: 9rem 0 7rem 0; }
       .section--3__info-box > div p {
         text-align: center;
         line-height: 1.4; }
@@ -264,73 +264,41 @@ body {
       margin-top: 2rem;
       color: #fff; }
     .section--4 .road {
-      margin: 55rem 0 0 20%;
+      margin: 45rem 0 0 20%;
       width: 130rem;
-      height: 85rem;
+      height: 100rem;
       position: relative;
       display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(3, 1fr); }
-      .section--4 .road__background {
-        z-index: -1;
-        width: 725px;
-        height: 574px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); }
-    .section--4 .pin {
-      width: 6.2rem;
-      height: 8.6rem; }
-      .section--4 .pin-1 {
-        margin: 6rem 0 0 31.6rem; }
-        @media screen and (min-width: 2099px) {
-          .section--4 .pin-1 {
-            margin: 16rem 0 0 40.5rem; } }
-      .section--4 .pin-2 {
-        margin: 11.4rem 62.9rem 0 0; }
-        @media screen and (min-width: 2099px) {
-          .section--4 .pin-2 {
-            margin: 10.7rem 63.6rem 0 0; } }
-      .section--4 .pin-3 {
-        margin: 18rem 0 0 45.9rem; }
-        @media screen and (min-width: 2099px) {
-          .section--4 .pin-3 {
-            margin: -2rem 0 0 51rem; } }
-    .section--4 .row {
-      display: grid;
-      grid-template-rows: 1fr; }
-      .section--4 .row-left {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2; }
-      .section--4 .row-right {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2; }
-      .section--4 .row-column {
-        margin-bottom: 5rem; }
-      .section--4 .row-1 {
-        grid-template-columns: min-content 1fr; }
-      .section--4 .row-2 {
-        grid-template-columns: 1fr min-content;
-        grid-template-rows: 1fr; }
-      .section--4 .row-3 {
-        grid-template-columns: 1fr;
-        grid-template-rows: 2fr; }
+      grid-template-columns: 2fr 3fr;
+      grid-template-rows: repeat(3, 1fr);
+      column-gap: 5rem;
+      background: url(../img/4/road.svg) no-repeat;
+      background-position: center;
+      background-size: 55%; }
+    .section--4 .row-1 {
+      grid-column: 2 / 3; }
+    .section--4 .row-2 {
+      grid-column: 1 / 2; }
+    .section--4 .row-3 {
+      grid-column: 1 / 3; }
     .section--4 .text {
       width: 100%;
       height: 100%; }
       .section--4 .text-1 {
         text-align: left;
-        padding: 4rem 0 0 14rem; }
+        display: flex;
+        justify-content: center;
+        flex-direction: column; }
       .section--4 .text-2 {
         text-align: right;
-        padding: 8rem 15rem 0 0; }
+        padding: 3rem 0 0 0; }
       .section--4 .text-3 {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-right: 32rem; }
+        justify-content: flex-end;
+        padding-right: 30rem; }
       .section--4 .text h2 {
         font-family: "GothBold", sans-serif;
         font-size: 3rem;
@@ -677,8 +645,7 @@ body {
     background-size: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    display: none; }
+    align-items: center; }
   .parallax-2 > div {
     width: 100%;
     height: 100%;

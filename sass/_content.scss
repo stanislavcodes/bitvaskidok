@@ -157,7 +157,7 @@
       margin-top: 5rem;
 
       h4 {
-        margin: 9rem 0 3.5rem 0;
+        margin: 9rem 0 7rem 0;
       }
 
       & > div {
@@ -238,83 +238,28 @@
     }
 
     .road {
-      margin: 55rem 0 0 20%;
+      margin: 45rem 0 0 20%;
       width: 130rem;
-      height: 85rem;
+      height: 100rem;
       position: relative;
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: 2fr 3fr;
       grid-template-rows: repeat(3, 1fr);
+      column-gap: 5rem;
 
-      &__background {
-        z-index: -1;
-        width: 725px;
-        height: 574px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    }
-    .pin {
-      width: 6.2rem;
-      height: 8.6rem;
-      // display: none;
-
-      // @include breakpointMin(xxlarge) {
-      //   width: 6.2rem;
-      //   height: 8.6rem;
-      // }
-
-      &-1 {
-        margin: 6rem 0 0 31.6rem;
-
-        @include breakpointMin(xxlarge) {
-          margin: 16rem 0 0 40.5rem;
-        }
-      }
-      &-2 {
-        margin: 11.4rem 62.9rem 0 0;
-
-        @include breakpointMin(xxlarge) {
-          margin: 10.7rem 63.6rem 0 0;
-        }
-      }
-      &-3 {
-        margin: 18rem 0 0 45.9rem;
-
-        @include breakpointMin(xxlarge) {
-          margin: -2rem 0 0 51rem;
-        }
-      }
+      background: url(../img/4/road.svg) no-repeat;
+      background-position: center;
+      background-size: 55%;
     }
     .row {
-      display: grid;
-
-      grid-template-rows: 1fr;
-
-      &-left {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-      }
-      &-right {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
-      }
-      &-column {
-        margin-bottom: 5rem;
-      }
-
       &-1 {
-        grid-template-columns: min-content 1fr;
+        grid-column: 2 / 3;
       }
       &-2 {
-        grid-template-columns: 1fr min-content;
-        grid-template-rows: 1fr;
+        grid-column: 1 / 2;
       }
       &-3 {
-        grid-template-columns: 1fr;
-        grid-template-rows: 2fr;
+        grid-column: 1 / 3;
       }
     }
 
@@ -324,18 +269,21 @@
 
       &-1 {
         text-align: left;
-        padding: 4rem 0 0 14rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
       }
       &-2 {
         text-align: right;
-        padding: 8rem 15rem 0 0;
+        padding: 3rem 0 0 0;
       }
       &-3 {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-right: 32rem;
+        justify-content: flex-end;
+        padding-right: 30rem;
       }
 
       h2 {
