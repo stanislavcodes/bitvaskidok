@@ -279,7 +279,7 @@ body {
       margin-top: 2rem;
       color: #fff; }
     .section--4 .road {
-      margin: 45rem 0 0 20%;
+      margin: 45rem 0 0 0;
       width: 130rem;
       height: 100rem;
       position: relative;
@@ -712,6 +712,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
+    @media screen and (max-width: 899px) {
+      .parallax-2__container {
+        background-position: 10rem 15rem; } }
+  @media screen and (max-width: 899px) {
+    .parallax-2--bg {
+      padding-top: 15rem; } }
   .parallax-2 > div {
     width: 100%;
     height: 100%;
