@@ -24,10 +24,13 @@ html {
   // }
 
   @include breakpointMax(xxlarge) {
-    font-size: 55%;
+    font-size: 56.25%;
   }
   @include breakpointMax(xlarge) {
     font-size: 45%;
+  }
+  @include breakpointMax(xmedium) {
+    font-size: 37.5%;
   }
   @include breakpointMin(xxxlarge) {
     font-size: 85%;
