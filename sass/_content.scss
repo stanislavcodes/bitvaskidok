@@ -423,8 +423,11 @@
 
   &--6 {
     // height: 97.5rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+
+    @include breakpointMax(medium) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
 
     &__info {
       font-size: 2.2rem;

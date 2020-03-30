@@ -1,25 +1,24 @@
 {
-  "name": "battleofdiscounts",
+  "name": "bitvaskidok",
   "version": "1.0.0",
-  "description": "Landing Page for discounts battle",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass sass/main.scss css/style.css -w",
-    "server": "live-server",
-    "start": "npm-run-all --parallel server sass",
-    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.comp.css -o css/style.css",
-    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-    "build": "npm-run-all compile:sass prefix:css"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Stanislav",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stanislavcodes/bitvaskidok.git"
+  },
+  "author": "Stanislav Korchevskyi",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stanislavcodes/bitvaskidok/issues"
+  },
+  "homepage": "https://github.com/stanislavcodes/bitvaskidok#readme",
   "devDependencies": {
-    "autoprefixer": "^9.6.1",
-    "concat": "^1.0.3",
-    "node-sass": "^4.12.0",
-    "npm-run-all": "^4.1.5",
-    "postcss-cli": "^6.1.3",
-    "sass": "^1.20.1"
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
   }
 }

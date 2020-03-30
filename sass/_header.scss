@@ -6,6 +6,7 @@
   background-image: url(../img/header-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   overflow: hidden;
 
   display: flex;
@@ -20,6 +21,10 @@
   }
   @include breakpointMax(large) {
     padding: 0 5rem 8rem 5rem;
+  }
+  @include breakpointMax(medium) {
+    background: #ffd62e;
+    padding: 5rem 5rem 8rem 5rem;
   }
   // @include breakpointMax(xlarge) {
   //   padding: 0 25rem 10rem 25rem;
@@ -75,17 +80,31 @@
 }
 
 .nav {
+  position: relative;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 3rem;
+  align-items: center;
+
+  @include breakpointMax(large) {
+    padding: 1rem 0;
+  }
+  @include breakpointMax(medium) {
+    display: none;
+  }
 
   &__logo {
+    max-width: 100px;
     img {
-      width: 80%;
-
-      @include breakpointMax(large) {
-        width: 60%;
+      width: 100%;
+      @include breakpointMax(medium) {
+        width: 80%;
       }
+    }
+
+    @include breakpointMax(medium) {
+      align-self: flex-start;
     }
   }
 
@@ -94,14 +113,24 @@
     display: flex;
     align-items: center;
 
-    @include breakpointMax(mediuum) {
+    @include breakpointMax(medium) {
+      width: 70%;
+      align-items: flex-end;
+      flex-direction: column;
       display: none;
+      margin-right: 5rem;
+      transition: display 0.5s ease-in-out;
     }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 2rem;
+
+      @include breakpointMax(medium) {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
     }
   }
 
@@ -125,20 +154,31 @@
 
 .nav-2 {
   background-color: #fff;
-  height: 7.5rem;
-  padding: 0 37.5rem;
+  // height: 7.5rem;
+  padding: 1rem 37.5rem;
   margin: 0;
   align-items: center;
   z-index: 10000;
+  transition: all 1s linear;
 
   @include breakpointMax(xxlarge) {
-    padding: 0 35rem;
+    padding: 1rem 35rem;
   }
   @include breakpointMax(large) {
-    padding: 0 20rem;
+    padding: 1rem 20rem;
   }
   @include breakpointMax(large) {
-    padding: 0 5rem;
+    padding: 1rem 15rem;
+  }
+  @include breakpointMax(medium) {
+    display: flex;
+    // height: 100px;
+  }
+
+  &.open {
+    @include breakpointMax(medium) {
+      // height: 170px;
+    }
   }
 
   display: none;
@@ -150,12 +190,16 @@
   // right: 0;
 
   &__logo {
+    // max-width: 100px;
     img {
-      width: 80%;
-
-      @include breakpointMax(large) {
-        width: 60%;
+      width: 100%;
+      @include breakpointMax(medium) {
+        width: 80%;
       }
+    }
+
+    @include breakpointMax(medium) {
+      max-width: 100px;
     }
   }
 
@@ -166,4 +210,71 @@
       color: #fff;
     }
   }
+}
+
+.hamburger {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  transform: rotate(0);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  display: none;
+  align-self: flex-start;
+
+  @include breakpointMax(medium) {
+    display: block;
+  }
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  border-radius: 12px;
+  background-color: #d60505;
+  transition: all 0.25s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 10px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 10px;
+}
+
+.hamburger span:nth-child(4) {
+  top: 20px;
+}
+
+//.hamburger:active span:nth-child(1),
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 10px;
+}
+
+//.hamburger:active span:nth-child(2),
+.hamburger.open span:nth-child(2) {
+  width: 50%;
+  transform: translatex(-100%);
+  opacity: 0;
+}
+
+//.hamburger:active span:nth-child(3),
+.hamburger.open span:nth-child(3) {
+  width: 50%;
+  transform: translatex(150%);
+  opacity: 0;
+}
+
+//.hamburger:active span:nth-child(4),
+.hamburger.open span:nth-child(4) {
+  transform: rotate(-45deg);
+  top: 10px;
 }
