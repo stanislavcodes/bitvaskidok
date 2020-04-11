@@ -7,30 +7,18 @@
 }
 
 html {
-  box-sizing: border-box;
   font-size: 62.5%;
-  // width: 100vw;
-
-  // @include breakpointMax(xsmall) {
-  //   font-size: 50%; // 1 rem = 8px, 8/16 = 0.5*100% = 50%
-  // }
-
-  // @include breakpointMax(small) {
-  //   font-size: 50%; // 1 rem = 8px, 8/16 = 0.5*100% = 50%
-  // }
-
-  // @include breakpointMax(medium) {
-  //   font-size: 56.25%; // 1 rem = 9px, 9/16 = 0.5625*100% = 56.25%
-  // }
-
-  @include breakpointMax(xxlarge) {
-    font-size: 56.25%;
+  @include breakpointMax(small) {
+    font-size: 28%;
+  }
+  @include breakpointMax(xmedium) {
+    font-size: 37.5%;
   }
   @include breakpointMax(xlarge) {
     font-size: 45%;
   }
-  @include breakpointMax(xmedium) {
-    font-size: 37.5%;
+  @include breakpointMax(xxlarge) {
+    font-size: 56.25%;
   }
   @include breakpointMin(xxxlarge) {
     font-size: 85%;

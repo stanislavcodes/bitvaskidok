@@ -19,12 +19,19 @@
   @include breakpointMax(xxlarge) {
     padding: 0 30rem 10rem 30rem;
   }
-  @include breakpointMax(large) {
-    padding: 0 5rem 8rem 5rem;
+  @include breakpointMax(xlarge) {
+    padding: 0 20rem 9rem 20rem;
   }
-  @include breakpointMax(medium) {
+  @include breakpointMax(large) {
+    padding: 0 2rem 8rem 2rem;
+  }
+  @include breakpointMax(xmedium) {
     background: #ffd62e;
-    padding: 5rem 5rem 8rem 5rem;
+    padding: 0 2rem 8rem 2rem;
+  }
+  @include breakpointMax(small) {
+    background: #ffd62e;
+    padding: 0 0 8rem 0;
   }
   // @include breakpointMax(xlarge) {
   //   padding: 0 25rem 10rem 25rem;
@@ -38,6 +45,10 @@
     row-gap: 2rem;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, min-content);
+
+    @include breakpointMax(small) {
+      margin: 0 5rem;
+    }
 
     & > div {
       display: flex;
@@ -73,6 +84,10 @@
     line-height: 1.4;
     margin-bottom: 4.5rem;
 
+    @include breakpointMax(small) {
+      margin: 0 4.5rem 4.5rem 4.5rem;
+    }
+
     &--black {
       font-family: "GothBlack", sans-serif;
     }
@@ -86,25 +101,32 @@
   justify-content: space-between;
   margin-bottom: 3rem;
   align-items: center;
+  padding: 1rem 0;
 
   @include breakpointMax(large) {
     padding: 1rem 0;
   }
-  @include breakpointMax(medium) {
-    display: none;
+  @include breakpointMax(xmedium) {
+    padding: 1rem 0;
+    height: 6vh;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  &.open {
+    @include breakpointMax(xmedium) {
+      height: 30vh;
+    }
   }
 
   &__logo {
     max-width: 100px;
     img {
       width: 100%;
-      @include breakpointMax(medium) {
-        width: 80%;
-      }
-    }
-
-    @include breakpointMax(medium) {
-      align-self: flex-start;
+      // @include breakpointMax(medium) {
+      //   width: 80%;
+      // }
     }
   }
 
@@ -113,13 +135,23 @@
     display: flex;
     align-items: center;
 
-    @include breakpointMax(medium) {
-      width: 70%;
-      align-items: flex-end;
+    @include breakpointMax(xmedium) {
+      visibility: hidden;
+      align-items: center;
       flex-direction: column;
-      display: none;
-      margin-right: 5rem;
-      transition: display 0.5s ease-in-out;
+      // display: none;
+      transition: all 0.5s linear;
+      transform: translateY(-150%);
+
+      .nav-2__item:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &.open {
+      transform: translateY(0);
+      // display: flex;
+      visibility: visible;
     }
   }
 
@@ -127,7 +159,7 @@
     &:not(:last-child) {
       margin-right: 2rem;
 
-      @include breakpointMax(medium) {
+      @include breakpointMax(xmedium) {
         margin-right: 0;
         margin-bottom: 1rem;
       }
@@ -154,52 +186,82 @@
 
 .nav-2 {
   background-color: #fff;
-  // height: 7.5rem;
   padding: 1rem 37.5rem;
   margin: 0;
   align-items: center;
   z-index: 10000;
-  transition: all 1s linear;
-
-  @include breakpointMax(xxlarge) {
-    padding: 1rem 35rem;
-  }
-  @include breakpointMax(large) {
-    padding: 1rem 20rem;
-  }
-  @include breakpointMax(large) {
-    padding: 1rem 15rem;
-  }
-  @include breakpointMax(medium) {
-    display: flex;
-    // height: 100px;
-  }
-
-  &.open {
-    @include breakpointMax(medium) {
-      // height: 170px;
-    }
-  }
-
-  display: none;
-  // display: flex;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  // left: 0;
-  // right: 0;
+  display: none;
+  overflow-y: hidden;
+  transition: all 0.5s linear;
+
+  @include breakpointMax(xxlarge) {
+    padding: 2rem 35rem;
+  }
+  @include breakpointMax(xlarge) {
+    padding: 1rem 20rem;
+  }
+  @include breakpointMax(large) {
+    padding: 1rem 2rem;
+  }
+  // @include breakpointMax(xmedium) {
+  //   padding: 1rem 15rem;
+  // }
+  @include breakpointMax(xmedium) {
+    padding: 0 2rem;
+    height: 6vh;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  &.open {
+    @include breakpointMax(xmedium) {
+      height: 30vh;
+    }
+  }
+
+  &__logo-box {
+    // max-width: 100%;
+    height: 6vh;
+    align-self: start;
+    @include flex-center;
+    @include breakpointMax(xmedium) {
+      max-width: 130px;
+    }
+  }
 
   &__logo {
     // max-width: 100px;
     img {
       width: 100%;
-      @include breakpointMax(medium) {
-        width: 80%;
+    }
+
+    @include breakpointMax(xmedium) {
+      max-width: 100px;
+    }
+  }
+
+  &__list {
+    @include breakpointMax(xmedium) {
+      visibility: hidden;
+      align-items: center;
+      flex-direction: column;
+      // display: none;
+      transition: all 0.5s linear;
+      transform: translateY(-150%);
+
+      .nav-2__item:not(:last-child) {
+        margin-bottom: 1rem;
       }
     }
 
-    @include breakpointMax(medium) {
-      max-width: 100px;
+    &.open {
+      transform: translateY(0);
+      // display: flex;
+      visibility: visible;
     }
   }
 
@@ -210,27 +272,37 @@
       color: #fff;
     }
   }
+
+  &__hamburger-box {
+    // width: 100%;
+    height: 6vh;
+    align-self: start;
+    @include flex-center;
+  }
 }
 
 .hamburger {
-  width: 30px;
-  height: 20px;
+  width: 21px;
+  height: 18px;
+  // width: 30px;
+  // height: 20px;
   position: relative;
   transform: rotate(0);
   transition: all 0.5s ease-in-out;
   cursor: pointer;
   display: none;
-  align-self: flex-start;
 
-  @include breakpointMax(medium) {
+  @include breakpointMax(xmedium) {
+    // margin-top: 1rem;
     display: block;
+    grid-column: 3 / 4;
   }
 }
 
 .hamburger span {
   display: block;
   position: absolute;
-  height: 6px;
+  height: 4px;
   width: 100%;
   border-radius: 12px;
   background-color: #d60505;
@@ -242,21 +314,25 @@
 }
 
 .hamburger span:nth-child(2) {
-  top: 10px;
+  top: 7px;
+  // top: 10px;
 }
 
 .hamburger span:nth-child(3) {
-  top: 10px;
+  top: 7px;
+  // top: 10px;
 }
 
 .hamburger span:nth-child(4) {
-  top: 20px;
+  top: 14px;
+  // top: 20px;
 }
 
 //.hamburger:active span:nth-child(1),
 .hamburger.open span:nth-child(1) {
   transform: rotate(45deg);
-  top: 10px;
+  top: 7px;
+  // top: 10px;
 }
 
 //.hamburger:active span:nth-child(2),
@@ -276,5 +352,6 @@
 //.hamburger:active span:nth-child(4),
 .hamburger.open span:nth-child(4) {
   transform: rotate(-45deg);
-  top: 10px;
+  top: 7px;
+  // top: 10px;
 }

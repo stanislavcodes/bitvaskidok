@@ -24,8 +24,7 @@ function watch() {
     server: {
       baseDir: "./"
     },
-    browser: ["google chrome", "firefox"]
-    // open: "external",
+    browser: ["chrome", "firefox"]
   });
   gulp.watch("./sass/**/*.scss", style);
   gulp.watch("./*.html").on("change", reload);

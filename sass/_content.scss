@@ -48,11 +48,17 @@
   @include breakpointMax(xxlarge) {
     padding: 11rem 35rem;
   }
-  @include breakpointMax(large) {
-    padding: 8rem 16rem;
+  @include breakpointMax(xlarge) {
+    padding: 9rem 20rem;
   }
-  @include breakpointMax(medium) {
+  @include breakpointMax(large) {
+    padding: 8rem 8rem;
+  }
+  @include breakpointMax(xmedium) {
     padding: 10rem 5rem;
+  }
+  @include breakpointMax(small) {
+    padding: 5rem 2rem;
   }
   // @include breakpointMax(xlarge) {
   //   padding: 10rem 30rem;
@@ -68,6 +74,79 @@
     width: 51rem;
     height: 2rem;
     transform: translateY(-100%);
+
+    @include breakpointMax(xmedium) {
+      transform: translateY(0);
+      height: 1.5rem;
+    }
+    @include breakpointMax(small) {
+      transform: translateY(0);
+      height: 1.5rem;
+    }
+
+    &--1 {
+      width: 51rem;
+      @include breakpointMax(xmedium) {
+        width: 100%;
+      }
+      @include breakpointMax(small) {
+        width: 38rem;
+      }
+    }
+    &--2 {
+      width: 59rem;
+      @include breakpointMax(xmedium) {
+        width: 55rem;
+      }
+      @include breakpointMax(small) {
+        width: 38rem;
+      }
+    }
+    &--3 {
+      width: 79rem;
+      @include breakpointMax(xmedium) {
+        width: 55rem;
+      }
+      @include breakpointMax(small) {
+        width: 38rem;
+      }
+    }
+    &--5 {
+      width: 85rem;
+      @include breakpointMax(xmedium) {
+        width: 55rem;
+      }
+      @include breakpointMax(small) {
+        width: 38rem;
+      }
+    }
+    &--6 {
+      width: 19rem;
+      @include breakpointMax(xmedium) {
+        width: 55rem;
+      }
+      @include breakpointMax(small) {
+        width: 38rem;
+      }
+    }
+    &--7 {
+      width: 66rem;
+      @include breakpointMax(xmedium) {
+        width: 55rem;
+      }
+      @include breakpointMax(small) {
+        width: 38rem;
+      }
+    }
+    &--8 {
+      width: 54rem;
+      @include breakpointMax(xmedium) {
+        width: 55rem;
+      }
+      @include breakpointMax(small) {
+        width: 38rem;
+      }
+    }
 
     &--yellow {
       background-color: #ffd52b;
@@ -99,12 +178,56 @@
       grid-template-rows: 1fr;
       margin-top: 7.5rem;
       justify-items: center;
+      column-gap: 1rem;
+
+      @include breakpointMax(xmedium) {
+        grid-template-rows: repeat(2, min-content);
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 0;
+        row-gap: 5rem;
+      }
+
+      @include breakpointMax(small) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, min-content);
+        column-gap: 0;
+        row-gap: 5rem;
+      }
+
+      .column {
+        @include breakpointMax(xmedium) {
+          &-1 {
+            grid-column: 1 / 3;
+          }
+          &-2 {
+            grid-column: 3 / 5;
+          }
+          &-3 {
+            grid-column: 2 / 4;
+          }
+        }
+        @include breakpointMax(small) {
+          &-1 {
+            grid-column: 1 / -1;
+          }
+          &-2 {
+            grid-column: 1 / -1;
+          }
+          &-3 {
+            grid-column: 1 / -1;
+          }
+        }
+      }
 
       & > div {
         max-width: 30rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @include breakpointMax(small) {
+          max-width: 80%;
+        }
 
         p {
           text-align: center;
@@ -116,8 +239,21 @@
         }
       }
       .progress-bar {
-        width: 13rem;
-        height: 13rem;
+        @include flex-center;
+        position: relative;
+
+        span {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          @include flex-center;
+          font-family: $gpMedium;
+          font-size: 26px;
+        }
       }
     }
   }
@@ -166,12 +302,20 @@
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: repeat(3, 1fr);
+      row-gap: 2rem;
+      column-gap: 2rem;
 
-      @include breakpointMax(medium) {
-        row-gap: 1rem;
-        column-gap: 1rem;
+      @include breakpointMax(xmedium) {
+        row-gap: 3rem;
+        column-gap: 2rem;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(4, min-content);
+      }
+      @include breakpointMax(small) {
+        row-gap: 3rem;
+        column-gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        // grid-template-rows: repeat(4, min-content);
       }
 
       &--item {
@@ -179,8 +323,11 @@
         @include flex-center;
 
         &17 {
-          @include breakpointMax(medium) {
+          @include breakpointMax(xmedium) {
             grid-column: 2 / 3;
+          }
+          @include breakpointMax(small) {
+            grid-column: 1 / 2;
           }
         }
       }
@@ -190,7 +337,6 @@
   &--3 {
     width: 100%;
     // height: 110rem;
-
     &__info-box {
       display: flex;
       flex-direction: column;
@@ -241,10 +387,47 @@
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: 1fr;
 
+      @include breakpointMax(xmedium) {
+        grid-template-rows: repeat(2, min-content);
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 1rem;
+        row-gap: 5rem;
+      }
+
+      @include breakpointMax(small) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, min-content);
+        column-gap: 0;
+        row-gap: 5rem;
+      }
+
       &--item {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @include breakpointMax(xmedium) {
+          &:nth-child(1) {
+            grid-column: 1 / 3;
+          }
+          &:nth-child(2) {
+            grid-column: 3 / 5;
+          }
+          &:nth-child(3) {
+            grid-column: 2 / 4;
+          }
+        }
+        @include breakpointMax(small) {
+          &:nth-child(1) {
+            grid-column: 1 / -1;
+          }
+          &:nth-child(2) {
+            grid-column: 1 / -1;
+          }
+          &:nth-child(3) {
+            grid-column: 1 / -1;
+          }
+        }
       }
     }
   }
@@ -254,106 +437,165 @@
     // height: 155rem;
     width: 100vw;
     background: #fff;
-    padding-top: 0;
+    padding: 0;
     background: url(../img/4/bg-4.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     display: flex;
     justify-content: center;
 
+    @include breakpointMax(xmedium) {
+      background-size: 140%;
+    }
+    @include breakpointMax(small) {
+      background: url(../img/parallax-2/parallax-2-bg-mobile-sm.svg) center top;
+      background-repeat: no-repeat;
+      background-size: 150%;
+    }
+
     &__heading-box {
       @include flex-center;
-      width: 31rem;
-      height: 6.5rem;
+      width: 29rem;
+      height: 6rem;
       background-color: #008aff;
-      transform: rotate(-5deg) translateX(10%);
+      transform: rotate(-3deg) translateX(10%);
       box-shadow: 0.5rem 0.5rem 0 #00000056;
+
+      @include breakpointMax(small) {
+        width: 23rem;
+        height: 5rem;
+      }
     }
 
     &__big-txt {
       font-family: $gpBlack;
       font-size: 6rem;
-      margin-top: 2rem;
+      margin-top: 1rem;
       color: #fff;
+      text-align: center;
     }
 
+    &__paragraph {
+      font-family: $gpLight;
+      font-size: 1.6rem;
+      color: #fff;
+      line-height: 1.5;
+      letter-spacing: 0.04rem;
+      max-width: 50rem;
+      margin-bottom: 3rem;
+    }
     .road {
-      margin: 45rem 0 0 0;
-      width: 130rem;
-      height: 100rem;
-      position: relative;
-      display: grid;
-      grid-template-columns: 2fr 3fr;
-      grid-template-rows: repeat(3, 1fr);
-      column-gap: 5rem;
-
+      position: absolute;
+      top: 0;
+      left: 70%;
+      transform: translatex(-70%);
+      z-index: 1;
+      width: 72rem;
+      height: 64rem;
+      background-color: #a55eea;
       background: url(../img/4/road.svg) no-repeat;
       background-position: center;
-      background-size: 55%;
+      background-size: 99%;
 
       @include breakpointMax(xmedium) {
-        margin: 55rem 0 0 0;
-        background-position: 75% 50%;
-        grid-template-columns: 1fr 1fr;
+        background-size: 70%;
+        left: 18%;
+        transform: translatex(0);
       }
-    }
-    .row {
-      &-1 {
-        grid-column: 2 / 3;
+      @include breakpointMax(small) {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url(../img/4/road-mobile.svg) no-repeat;
+        background-size: 100%;
       }
-      &-2 {
-        grid-column: 1 / 2;
-      }
-      &-3 {
-        grid-column: 1 / 3;
-      }
-    }
 
-    .text {
-      width: 100%;
-      height: 100%;
-
-      &-1 {
-        text-align: left;
+      &__container {
+        margin: 65rem 0 0 0;
+        position: relative;
         display: flex;
-        justify-content: center;
+        // justify-content: center;
         flex-direction: column;
+        width: 140rem;
+        height: 90rem;
 
-        @include breakpointMax(xmedium) {
-          justify-content: flex-end;
+        @include breakpointMax(xlarge) {
+          margin: 55rem 0 0 0;
         }
-      }
-      &-2 {
-        text-align: right;
-        padding: 3rem 0 0 0;
         @include breakpointMax(xmedium) {
+          margin: 45rem 0 0 0;
         }
-      }
-      &-3 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        justify-content: flex-end;
-        padding-right: 30rem;
+        @include breakpointMax(small) {
+          max-width: 414px;
+          margin: 55rem 0 0 0;
+        }
 
-        @include breakpointMax(xmedium) {
-          justify-content: center;
-          padding-right: 0;
-        }
-      }
+        .text {
+          z-index: 10;
+          display: flex;
+          flex-direction: column;
 
-      h2 {
-        font-family: "GothBold", sans-serif;
-        font-size: 3rem;
-        margin-bottom: 3rem;
-      }
-      p {
-        color: #000;
-        font-family: $gpLight;
-        font-size: 1.7rem;
-        line-height: 1.4;
-        max-width: 51rem;
+          &-1 {
+            margin: 0 0 12rem 70rem;
+            text-align: left;
+            @include breakpointMax(xmedium) {
+              margin: 9rem 0 4rem 40rem;
+            }
+            @include breakpointMax(small) {
+              margin: 0 2rem 10rem 9rem;
+              text-align: center;
+            }
+          }
+          &-2 {
+            margin: 0 75rem 30rem 0;
+            align-self: flex-end;
+            text-align: right;
+            @include breakpointMax(xmedium) {
+              margin: 0 45rem 17rem 0;
+            }
+            @include breakpointMax(small) {
+              margin: 0 8rem 22rem 2rem;
+              text-align: center;
+            }
+          }
+          &-3 {
+            margin-right: 4rem;
+            text-align: center;
+            align-items: center;
+            @include breakpointMax(xmedium) {
+              margin-right: 7rem;
+            }
+            @include breakpointMax(small) {
+              margin: 0 2rem 0 8rem;
+            }
+          }
+
+          h2 {
+            font-family: "GothBold", sans-serif;
+            font-size: 3rem;
+            // margin-bottom: 3rem;
+
+            @include breakpointMax(small) {
+              font-size: 2.4rem;
+              margin-bottom: 1rem;
+            }
+          }
+          p {
+            color: #000;
+            font-family: $gpLight;
+            font-size: 1.7rem;
+            line-height: 1.4;
+            max-width: 51rem;
+            margin-right: 0;
+
+            @include breakpointMax(xmedium) {
+              max-width: 45rem;
+            }
+          }
+        }
       }
     }
   }
@@ -374,23 +616,52 @@
       font-size: 1.6rem;
       text-align: center;
       margin: 3.5rem 0 6.5rem 0;
+
+      @include breakpointMax(small) {
+        margin: 2rem 0 4rem 0;
+      }
     }
 
     &__grid {
       width: 100%;
       display: grid;
       column-gap: 4.5rem;
-      // grid-template-columns: repeat(7, min-content);
+      row-gap: 4.5rem;
       grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+
+      @include breakpointMax(xmedium) {
+        grid-template-columns: repeat(4, 1fr);
+      }
 
       @include breakpointMax(medium) {
         column-gap: 2rem;
         row-gap: 2rem;
       }
 
+      @include breakpointMax(small) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       &--item {
         @include flex-center;
         flex-direction: column;
+
+        &-5 {
+          @include breakpointMax(xmedium) {
+            grid-column: 2 / 3;
+          }
+          @include breakpointMax(small) {
+            grid-column: 1 / 2;
+          }
+        }
+        &-6 {
+          @include breakpointMax(xmedium) {
+            grid-column: 3 / 4;
+          }
+          @include breakpointMax(small) {
+            grid-column: 2 / 3;
+          }
+        }
       }
     }
 
@@ -417,7 +688,7 @@
       font-size: 2.3rem;
       font-family: "GothBold", sans-serif;
       letter-spacing: 25;
-      margin: 7rem 0 12rem 0;
+      margin: 7rem 0 0 0;
     }
   }
 
@@ -546,6 +817,11 @@
       padding-left: 8rem;
       padding-right: 8rem;
     }
+    @include breakpointMax(small) {
+      align-items: stretch;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
 
     &__info-box {
       width: 100%;
@@ -569,11 +845,14 @@
 
       &s-box {
         @include flex-center;
-        width: 100rem;
+        // width: 100rem;
         flex-direction: column;
         margin-top: 10rem;
 
         @include breakpointMax(xmedium) {
+          margin-top: 4rem;
+        }
+        @include breakpointMax(small) {
           width: 100%;
         }
       }
@@ -581,6 +860,10 @@
       &__name {
         font-family: $gpBold;
         font-size: 2.6rem;
+
+        @include breakpointMax(xmedium) {
+          font-size: 2rem;
+        }
       }
 
       &__icon {
@@ -643,6 +926,10 @@
 
     &__form {
       margin-top: 10rem;
+      @include breakpointMax(xmedium) {
+        margin-top: 4rem;
+      }
+
       &--heading {
         font-size: 3rem;
         font-family: $gpBlack;
@@ -653,6 +940,10 @@
         font-family: $gpLight;
         font-size: 1.8rem;
         margin-bottom: 6rem;
+
+        @include breakpointMax(small) {
+          margin-bottom: 3rem;
+        }
       }
 
       &--grid {
@@ -660,6 +951,11 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
         justify-items: center;
+
+        @include breakpointMax(small) {
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(3, min-content);
+        }
 
         .col {
           display: flex;
@@ -695,6 +991,10 @@
           text-decoration: none;
           border: none;
           margin: 3rem 0 5rem 0;
+
+          @include breakpointMax(small) {
+            margin: 1rem 0 2rem 0;
+          }
         }
       }
     }
@@ -710,6 +1010,12 @@
 
   font-family: $gpLight;
 
+  @include breakpointMax(xmedium) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, min-content);
+    justify-items: center;
+  }
+
   textarea {
     resize: none;
     grid-column: 1 / 4;
@@ -721,6 +1027,11 @@
 
     &::placeholder {
       font-family: $gpLight;
+    }
+
+    @include breakpointMax(xmedium) {
+      grid-column: 1 / -1;
+      width: 90%;
     }
   }
 
@@ -736,6 +1047,11 @@
     grid-column: 2 / 3;
     grid-row: 4 / 5;
     margin-top: 2rem;
+
+    @include breakpointMax(xmedium) {
+      grid-column: 1 / -1;
+      grid-row: 6 / 7;
+    }
   }
 }
 .input {
@@ -751,9 +1067,19 @@
   &--big {
     width: 87rem;
     grid-column: 1 / 4;
+
+    @include breakpointMax(xmedium) {
+      width: 90%;
+      grid-column: 1 / -1;
+    }
   }
   &--small {
     width: 27rem;
+
+    @include breakpointMax(xmedium) {
+      width: 90%;
+      grid-column: 1 / -1;
+    }
   }
 }
 
@@ -764,6 +1090,18 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 5rem min-content 1fr;
+  z-index: 10000;
+
+  &__bg-close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+  }
 
   &__container {
     position: -webkit-sticky;

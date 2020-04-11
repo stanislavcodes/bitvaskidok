@@ -1,81 +1,74 @@
 // nav
-// document.addEventListener("scroll", function() {
-//   if (window.pageYOffset >= 300) {
-//     document.getElementById("nav2").style.display = `flex`;
-//     document.getElementById("nav2").style.position = `-webkit-sticky`;
-//     document.getElementById("nav2").style.position = `sticky`;
-//     document.getElementById("nav2").style.top = `0`;
-//   } else {
-//     document.getElementById("nav2").style.display = `none`;
-//   }
-// });
 let nav2 = document.getElementById("nav2");
-
-function navMediaCheck(g) {
-  if (g.matches) {
-    // If media query matches
-    document.addEventListener("scroll", function() {
-      if (window.pageYOffset >= 300) {
-        nav2.style.display = `flex`;
-        nav2.style.position = `-webkit-sticky`;
-        nav2.style.position = `sticky`;
-        nav2.style.top = `0`;
-      } else {
-        nav2.style.display = `none`;
-      }
-    });
-  } else {
+document.addEventListener("scroll", function () {
+  if (window.pageYOffset >= 300) {
     nav2.style.display = `flex`;
-    nav2.style.position = `-webkit-sticky`;
-    nav2.style.position = `sticky`;
-    nav2.style.top = `0`;
+  } else {
+    nav2.style.display = `none`;
   }
-}
+});
+// function navMediaCheck(g) {
+//   if (g.matches) {
+//     // If media query matches
+//     document.addEventListener("scroll", function () {
+//       if (window.pageYOffset >= 300) {
+//         nav2.style.display = `flex`;
+//       } else {
+//         nav2.style.display = `none`;
+//       }
+//     });
+//   } else {
+//     nav2.style.display = `grid`;
+//     nav2.style.position = `-webkit-sticky`;
+//     nav2.style.position = `sticky`;
+//   }
+// }
 
-var g = window.matchMedia("(min-width: 700px)");
-navMediaCheck(g);
+// var g = window.matchMedia("(min-width: 900px)");
+// navMediaCheck(g);
 
 // mobile nav
+let listOne = document.getElementById("listOne");
 let hamburger = document.querySelector(".hamburger");
-hamburger.addEventListener("click", function() {
+
+hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("open");
   nav2.classList.toggle("open");
+  listOne.classList.toggle("open");
 });
 
-let listOne = document.getElementById("listOne");
 let currentState = "closed";
 
-hamburger.addEventListener("click", function() {
-  if (currentState === "closed") {
-    listOne.style.display = `flex`;
-    console.log("opened");
-    currentState = "opened";
-    return currentState;
-  } else {
-    listOne.style.display = `none`;
-    console.log("closed");
-    currentState = "closed";
-    return currentState;
-  }
-});
+// hamburger.addEventListener("click", function() {
+//   if (currentState === "closed") {
+//     // listOne.style.display = `flex`;
+//     currentState = "opened";
+//     return currentState;
+//   } else {
+//     // listOne.style.display = `none`;
+//     currentState = "closed";
+//     return currentState;
+//   }
+// });
 
 // parallax
 
 let layers = document.querySelectorAll(".layer");
 
 function parallaxDefault() {
-  layers.forEach(layer => {
+  layers.forEach((layer) => {
     layer.style.transition = `all .5s`;
     layer.style.transform = `translate(0px, 0px)`;
   });
 }
 
 function parallax(event) {
-  layers.forEach(layer => {
+  layers.forEach((layer) => {
     let speed = layer.getAttribute("data-speed");
     layer.style.transition = `all 0s`;
-    layer.style.transform = `translate(${(event.clientX * speed) /
-      1000}px, ${(event.clientY * speed) / 2000}px)`;
+    layer.style.transform = `translate(${(event.clientX * speed) / 1000}px, ${
+      (event.clientY * speed) / 2000
+    }px)`;
   });
 }
 
@@ -84,12 +77,13 @@ function parallaxMediaCheck(x) {
   let layers = document.querySelectorAll(".layer");
   if (x.matches) {
     // If media query matches
-    document.addEventListener("mousemove", function(event) {
-      layers.forEach(layer => {
+    document.addEventListener("mousemove", function (event) {
+      layers.forEach((layer) => {
         let speed = layer.getAttribute("data-speed");
         layer.style.transition = `all 0s`;
-        layer.style.transform = `translate(${(event.clientX * speed) /
-          1000}px, ${(event.clientY * speed) / 2000}px)`;
+        layer.style.transform = `translate(${
+          (event.clientX * speed) / 1000
+        }px, ${(event.clientY * speed) / 2000}px)`;
       });
     });
   } else {
@@ -132,7 +126,7 @@ function fn(a) {
 }
 
 function check(b) {
-  questions[b].addEventListener("click", function() {
+  questions[b].addEventListener("click", function () {
     if (answers[b].classList.contains("answer--closed")) {
       fn(b);
     } else {
@@ -147,23 +141,68 @@ questions[2].addEventListener("click", check(2));
 
 // smooth scrolling
 var scroll = new SmoothScroll('.nav a[href*="#"]', {
-  speed: 400
+  speed: 400,
 });
 var easeOutQuart = new SmoothScroll('[data-easing="linear"]', {
-  easing: "linear"
+  easing: "linear",
 });
 
 // popup
 const popupOpen = document.querySelectorAll(".cta-popup");
 const popup = document.querySelector(".popup__container");
 const popupClose = document.getElementById("close-popup");
+const popupCloseOnBg = document.querySelector(".popup__bg-close");
 
-popupClose.addEventListener("click", function() {
+popupClose.addEventListener("click", function () {
+  popup.style.display = `none`;
+});
+
+popupCloseOnBg.addEventListener("click", function () {
   popup.style.display = `none`;
 });
 
 for (i = 0; i < popupOpen.length; i++) {
-  popupOpen[i].addEventListener("click", function() {
+  popupOpen[i].addEventListener("click", function () {
     popup.style.display = `flex`;
   });
 }
+
+// progress bar animations
+
+document.addEventListener("scroll", function () {
+  if (window.pageYOffset >= 300 && window.pageYOffset <= 500) {
+    $("#pb1").circleProgress({
+      value: 0.4,
+      size: 100,
+      thickness: 4,
+      startAngle: 30,
+      fill: { color: "#008aff" },
+      animation: {
+        duration: 600,
+      },
+    });
+
+    $("#pb2").circleProgress({
+      value: 0.6,
+      size: 100,
+      thickness: 4,
+      startAngle: 30,
+      fill: { color: "#32B228" },
+      animation: {
+        duration: 600,
+      },
+    });
+
+    $("#pb3").circleProgress({
+      value: 1,
+      size: 100,
+      thickness: 4,
+      startAngle: 30,
+      fill: { color: "#D60505" },
+      animation: {
+        duration: 600,
+      },
+    });
+  } else {
+  }
+});
