@@ -1,13 +1,5 @@
 // nav
-
 let nav2 = document.getElementById("nav2");
-// document.addEventListener("scroll", function () {
-//   if (window.pageYOffset >= 300) {
-//     nav2.style.display = `flex`;
-//   } else {
-//     nav2.style.display = `none`;
-//   }
-// });
 
 function navMediaCheck(g) {
   if (g.matches) {
@@ -38,8 +30,6 @@ var g = window.matchMedia("(min-width: 900px)");
 navMediaCheck(g);
 
 // mobile nav
-// let listOne = document.getElementById("listOne");
-// let listOne = document.getElementById("listTwo");
 let navs = document.querySelectorAll(".nav");
 let lists = document.querySelectorAll(".nav__list");
 let hamburgers = document.querySelectorAll(".hamburger");
@@ -56,14 +46,7 @@ for (i = 0; i < hamburgers.length; i++) {
   navMenu(i);
 }
 
-// hamburger.addEventListener("click", function () {
-//   hamburger.classList.toggle("open");
-//   nav2.classList.toggle("open");
-//   listOne.classList.toggle("open");
-// });
-
 // parallax
-
 let layers = document.querySelectorAll(".layer");
 
 function parallaxDefault() {
@@ -107,55 +90,15 @@ function parallaxMediaCheck(x) {
 var x = window.matchMedia("(min-width: 1029px)");
 parallaxMediaCheck(x);
 
-// creating our arrays
-// const questions = document.querySelectorAll(".question");
-// const answers = document.querySelectorAll(".answer");
-// const icons = document.querySelectorAll(".question__icon");
-// const texts = document.querySelectorAll(".answer__text");
-
-// function defaultState() {
-//   for (i = 0; i < questions.length; i++) {
-//     answers[i].classList.add("answer--closed");
-//     answers[i].style.height = `0`;
-//     answers[i].style.padding = `0 3rem`;
-//     icons[i].style.transform = `rotate(0)`;
-//   }
-// }
-
-// function fn(a) {
-//   defaultState();
-//   answers[a].classList.remove("answer--closed");
-//   answers[a].style.padding = `3rem`;
-//   texts[a].style.display = `block`;
-//   icons[a].style.transform = `rotate(-180deg)`;
-
-//   // calculating height
-//   let height = window.getComputedStyle(texts[a]).height;
-//   answers[a].style.height = `calc(${height} + 6rem)`;
-
-// }
-
-// function check(b) {
-//   questions[b].addEventListener("click", function () {
-//     if (answers[b].classList.contains("answer--closed")) {
-//       fn(b);
-//     } else {
-//       defaultState();
-//     }
-//   });
-// }
-
-// questions[0].addEventListener("click", check(0));
-// questions[1].addEventListener("click", check(1));
-// questions[2].addEventListener("click", check(2));
-
-////////////////////////////////////////////////////////////////////
-// const plans = document.querySelectorAll(".plan");
 const plans = document.querySelectorAll(".plan-box");
 const features = document.querySelectorAll(".feature");
 const planIcons = document.querySelectorAll(".plan__icon");
 const planTexts = document.querySelectorAll(".feature__text");
 const planRows = document.querySelectorAll(".calc-height");
+const iconCheck = document.querySelectorAll(".icon-check");
+const iconNot = document.querySelectorAll(".icon-not");
+
+console.log(iconNot);
 
 const questions = document.querySelectorAll(".question");
 const answers = document.querySelectorAll(".answer");
@@ -175,21 +118,38 @@ function calcHeight(arrIn, arrOut) {
 
 calcHeight(planRows, planHeights);
 calcHeight(quizTexts, quizHeights);
-console.log(planHeights);
-console.log(quizHeights);
 
-function defaultState(animateArr, iconsArr, num, paddingTop, arrIn, arrOut) {
-  animateArr[num].style.height = `0`;
-  animateArr[num].classList.add("closed");
-  animateArr[num].style.padding = `0 ${paddingTop}rem`;
-  iconsArr[num].style.transform = `rotate(0)`;
+// console.log(planTexts);
 
+function hideIcons(arrIconNot, arrIconChek) {
+  for (let i = 0; i < iconCheck.length; i++) {
+    iconCheck[i].style.visibility = `hidden`;
+  }
+  for (let i = 0; i < iconNot.length; i++) {
+    iconNot[i].style.visibility = `hidden`;
+  }
+}
+
+function defaultState(
+  animateArr,
+  iconsArr,
+  num,
+  paddingSide,
+  arrIn,
+  arrOut,
+  iconNot,
+  iconCheck, 
+  fnHideIcons
+) {
   for (let i = 0; i < animateArr.length; i++) {
     animateArr[i].style.height = `0`;
     animateArr[i].classList.add("closed");
-    animateArr[i].style.padding = `0 ${paddingTop}rem`;
+    animateArr[i].style.padding = `0 ${paddingSide}rem`;
     iconsArr[i].style.transform = `rotate(0)`;
-  }
+  };
+  for (let i = 0; i < arrIn.length; i++) {
+    arrIn[i].style.color = `#e2ecf5`;
+  };
 }
 
 function fn(
@@ -198,15 +158,37 @@ function fn(
   num,
   arrIn,
   arrOut,
-  paddingTop,
-  paddingBottom
+  paddingSide,
+  paddingBottom,
+  iconNot,
+  iconCheck,
+  fnHideIcons
 ) {
-  defaultState(animateArr, iconsArr, num, paddingTop, arrIn, arrOut);
+  defaultState(
+    animateArr,
+    iconsArr,
+    num,
+    paddingSide,
+    arrIn,
+    arrOut,
+    iconNot,
+    iconCheck,
+    fnHideIcons
+  );
 
   animateArr[num].classList.remove("closed");
-  animateArr[num].style.padding = `3rem ${paddingTop}rem`;
+  animateArr[num].style.padding = `3rem ${paddingSide}rem`;
   iconsArr[num].style.transform = `rotate(-180deg)`;
 
+  for (let i = 0; i < arrIn.length; i++) {
+    arrIn[i].style.color = `#000000`;
+  }
+  for (let i = 0; i < 18; i++) {
+    iconCheck[i].style.visibility = `visible`;
+  }
+  for (let i = 0; i < 6; i++) {
+    iconNot[i].style.visibility = `visible`;
+  }
   // calcHeight(arrIn, arrOut);
 
   if (arrOut.length > 3) {
@@ -218,21 +200,11 @@ function fn(
 		${arrOut[4]} + 
     ${arrOut[5]} + 
     6rem +
-    (${paddingBottom}rem) * 5) `;
+    10rem) `;
   } else {
-    // console.log(arrOut[num]);
-
     animateArr[num].style.height = `calc(
 		${arrOut[num]} + 
-    6rem +
-    (${paddingBottom}rem) * 5) `;
-
-    console.log(
-      (animateArr[num].style.height = `calc(
-		${arrOut[num]} + 
-    6rem +
-    (${paddingBottom}rem) * 5) `)
-    );
+    6rem`;
   }
 }
 
@@ -243,38 +215,89 @@ function check(
   num,
   arrIn,
   arrOut,
-  paddingTop,
-  paddingBottom
+  paddingSide,
+  paddingBottom, 
+  fnHideIcons
 ) {
   listenArr[num].addEventListener("click", function () {
     if (animateArr[num].classList.contains("closed")) {
-      fn(animateArr, iconsArr, num, arrIn, arrOut, paddingTop, paddingBottom);
+      fn(
+        animateArr,
+        iconsArr,
+        num,
+        arrIn,
+        arrOut,
+        paddingSide,
+        paddingBottom,
+        iconNot,
+        iconCheck,
+        fnHideIcons
+      );
     } else {
-      defaultState(animateArr, iconsArr, num, paddingTop, arrIn, arrOut);
+      defaultState(
+        animateArr,
+        iconsArr,
+        num,
+        paddingSide,
+        arrIn,
+        arrOut,
+        iconNot,
+        iconCheck,
+        fnHideIcons
+      );
     }
   });
 }
 
 (function () {
   for (let i = 0; i < features.length; i++) {
-    defaultState(features, planIcons, i, 1, planRows, planHeights);
+    defaultState(
+      features,
+      planIcons,
+      i,
+      0,
+      planTexts,
+      planHeights,
+      iconNot,
+      iconCheck,
+      hideIcons(iconNot, iconCheck)
+    );
   }
   for (let i = 0; i < answers.length; i++) {
-    defaultState(answers, quizIcons, i, 3, quizTexts, quizHeights);
+    defaultState(
+      answers,
+      quizIcons,
+      i,
+      0,
+      quizTexts,
+      quizHeights,
+      iconNot,
+      iconCheck
+    );
   }
 })();
 
 for (i = 0; i < 4; i++) {
   plans[i].addEventListener(
     "click",
-    check(plans, features, planIcons, i, planRows, planHeights, 1, 2)
+    check(
+      plans,
+      features,
+      planIcons,
+      i,
+      planTexts,
+      planHeights,
+      0,
+      2,
+      hideIcons(iconNot, iconCheck)
+    )
   );
 }
 
 for (i = 0; i < questions.length; i++) {
   questions[i].addEventListener(
     "click",
-    check(questions, answers, quizIcons, i, quizTexts, quizHeights, 3, 0)
+    check(questions, answers, quizIcons, i, quizTexts, quizHeights, 0, 0)
   );
 }
 ////////////////////////////////////////////////////////////////////

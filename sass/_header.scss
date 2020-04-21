@@ -233,6 +233,9 @@
     @include breakpointMax(xmedium) {
       height: 25vh;
     }
+    @include breakpointMax(small) {
+      height: 35vh;
+    }
   }
 
   &__logo-box {
@@ -273,7 +276,7 @@
     }
     @include breakpointMax(small) {
       .nav-2__item:not(:last-child) {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
       }
     }
 
