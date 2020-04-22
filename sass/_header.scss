@@ -86,6 +86,9 @@
     @include breakpointMax(small) {
       margin: 0 4.5rem 4.5rem 4.5rem;
     }
+    @include breakpointMax(xsmall) {
+      margin: 0 2rem 2rem 2rem;
+    }
 
     &--black {
       font-family: "GothBlack", sans-serif;
@@ -220,6 +223,7 @@
     padding: 1rem 2rem;
   }
   @include breakpointMax(xmedium) {
+    background-color: #ffd62e;
     padding: 0 2rem;
     height: 6vh;
 
@@ -279,6 +283,11 @@
         margin-bottom: 2rem;
       }
     }
+    @include breakpointMax(xsmall) {
+      .nav-2__item:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
 
     &.open {
       transform: translateY(0);
@@ -290,8 +299,16 @@
   &__link {
     font-family: $gpMedium;
     font-size: 1.4rem;
+    transition: all .2s;
+
+    &:hover {
+      color: #d60505;
+    }
     &--btn {
       color: #fff;
+      &:hover {
+        color: #fff;
+      }
     }
   }
 

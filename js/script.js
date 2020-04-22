@@ -98,7 +98,7 @@ const planRows = document.querySelectorAll(".calc-height");
 const iconCheck = document.querySelectorAll(".icon-check");
 const iconNot = document.querySelectorAll(".icon-not");
 
-console.log(iconNot);
+// console.log(iconNot);
 
 const questions = document.querySelectorAll(".question");
 const answers = document.querySelectorAll(".answer");
@@ -138,7 +138,7 @@ function defaultState(
   arrIn,
   arrOut,
   iconNot,
-  iconCheck, 
+  iconCheck,
   fnHideIcons
 ) {
   for (let i = 0; i < animateArr.length; i++) {
@@ -146,10 +146,10 @@ function defaultState(
     animateArr[i].classList.add("closed");
     animateArr[i].style.padding = `0 ${paddingSide}rem`;
     iconsArr[i].style.transform = `rotate(0)`;
-  };
+  }
   for (let i = 0; i < arrIn.length; i++) {
     arrIn[i].style.color = `#e2ecf5`;
-  };
+  }
 }
 
 function fn(
@@ -216,7 +216,7 @@ function check(
   arrIn,
   arrOut,
   paddingSide,
-  paddingBottom, 
+  paddingBottom,
   fnHideIcons
 ) {
   listenArr[num].addEventListener("click", function () {
@@ -331,43 +331,39 @@ for (i = 0; i < popupOpen.length; i++) {
 }
 
 // progress bar animations
+const circles = document.querySelectorAll(".progress-bar__circle");
+const circleOne = document.querySelector(".progress-bar__circle--1");
+const circleTwo = document.querySelector(".progress-bar__circle--2");
+const circleThree = document.querySelector(".progress-bar__circle--3");
+const circle = document.querySelector(".progress-bar__circle");
+const radius = circle.r.baseVal.value;
+const circumference = 2 * Math.PI * radius;
 
-document.addEventListener("scroll", function () {
-  if (window.pageYOffset >= 300 && window.pageYOffset <= 500) {
-    $("#pb1").circleProgress({
-      value: 0.4,
-      size: 100,
-      thickness: 4,
-      startAngle: -1.5708,
-      fill: { color: "#008aff" },
-      animation: {
-        duration: 600,
-      },
-    });
-
-    $("#pb2").circleProgress({
-      value: 0.6,
-      size: 100,
-      thickness: 4,
-      startAngle: -1.5708,
-      fill: { color: "#32B228" },
-      animation: {
-        duration: 600,
-      },
-    });
-
-    $("#pb3").circleProgress({
-      value: 1,
-      size: 100,
-      thickness: 4,
-      startAngle: -1.5708,
-      fill: { color: "#D60505" },
-      animation: {
-        duration: 600,
-      },
-    });
-  } else {
-  }
+circles.forEach((circle) => {
+  circle.style.strokeDasharray = `${circumference} ${circumference}`;
+  circle.style.strokeDashoffset = circumference;
 });
 
-///////////////////////////////////////////
+function setProgress(valueOne, valueTwo, valueThree) {
+  let offsetOne = circumference - (valueOne / 100) * circumference;
+  let offsetTwo = circumference - (valueTwo / 100) * circumference;
+  let offsetThree = circumference - (valueThree / 100) * circumference;
+  let offsets = [valueOne, valueTwo, valueThree];
+  circleOne.style.strokeDashoffset = offsetOne;
+  circleTwo.style.strokeDashoffset = offsetTwo;
+  circleThree.style.strokeDashoffset = offsetThree;
+}
+
+var something = (function () {
+  var executed = false;
+  return function () {
+    if (!executed) {
+      executed = true;
+      document.addEventListener("scroll", function () {
+        setProgress(45, 65, 100);
+      });
+    }
+  };
+})();
+
+something();

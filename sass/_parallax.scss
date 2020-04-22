@@ -1,11 +1,12 @@
 // parallax 1
 .header {
+  overflow-x: hidden;
   &__parallax {
     &--container {
       position: relative;
       width: 100%;
       height: 45rem;
-      overflow: hidden;
+      // overflow: hidden;
 
 
       @include breakpointMax(xlarge) {
@@ -90,6 +91,9 @@
       background-repeat: no-repeat;
       background-size: 200%;
     }
+    @include breakpointMax(medium) {
+      background-size: 240%;
+    }
     @include breakpointMax(small) {
       background-position: 10rem 15rem;
       // background: url(../img/parallax-2/parallax-2-bg-mobile-sm.svg) center no-repeat;
@@ -141,7 +145,7 @@
       padding-top: 25rem;
     }
     @include breakpointMax(xlarge) {
-      padding-top: 30rem;
+      padding-top: 27rem;
     }
     @include breakpointMax(xmedium) {
       padding-top: 15rem;

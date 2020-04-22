@@ -172,15 +172,28 @@
           <div class="column-1">
             <!-- <img class="progress-bar" src="img/pb-1.svg" alt="progress bar" /> -->
             <!-- <div id="pb1" class="progress-bar"><span>01.</span></div> -->
-            <div
-              id="pb1"
-              class="progress-bar"
-              class="circle"
-              data-value="0.4"
-              data-size="100"
-              data-thickness="4"
-            >
-              <span>01.</span>
+            <div class="circle-box">
+              <svg class="progress-bar" width="100" height="100">
+                <circle
+                  class="progress-bar__circle--bg"
+                  stroke="#e8eff5"
+                  stroke-width="4"
+                  cx="50"
+                  cy="50"
+                  r="42"
+                  fill="transparent"
+                />
+                <circle
+                  class="progress-bar__circle progress-bar__circle--1"
+                  stroke="#008aff"
+                  stroke-width="4"
+                  cx="50"
+                  cy="50"
+                  r="42"
+                  fill="transparent"
+                />
+              </svg>
+              <span class="progress-bar--value">01</span>
             </div>
             <h5 class="heading--small">Сбор заявок</h5>
             <p>
@@ -195,7 +208,29 @@
           </div>
           <div class="column-2">
             <!-- <img class="progress-bar" src="img/pb-2.svg" alt="progress bar" /> -->
-            <div id="pb2" class="progress-bar"><span>02.</span></div>
+            <div class="circle-box">
+              <svg class="progress-bar" width="100" height="100">
+                <circle
+                  class="progress-bar__circle--bg"
+                  stroke="#e8eff5"
+                  stroke-width="4"
+                  cx="50"
+                  cy="50"
+                  r="42"
+                  fill="transparent"
+                />
+                <circle
+                  class="progress-bar__circle progress-bar__circle--2"
+                  stroke="#32B228"
+                  stroke-width="4"
+                  cx="50"
+                  cy="50"
+                  r="42"
+                  fill="transparent"
+                />
+              </svg>
+              <span class="progress-bar--value">02</span>
+            </div>
             <h5 class="heading--small">Запуск рекламы</h5>
             <p>
               За месяц до мероприятия мы запустим рекламную кампанию по
@@ -204,7 +239,29 @@
           </div>
           <div class="column-3">
             <!-- <img class="progress-bar" src="img/pb-3.svg" alt="progress bar" /> -->
-            <div id="pb3" class="progress-bar"><span>03.</span></div>
+            <div class="circle-box">
+              <svg class="progress-bar" width="100" height="100">
+                <circle
+                  class="progress-bar__circle--bg"
+                  stroke="#e8eff5"
+                  stroke-width="4"
+                  cx="50"
+                  cy="50"
+                  r="42"
+                  fill="transparent"
+                />
+                <circle
+                  class="progress-bar__circle progress-bar__circle--3"
+                  stroke="#D60505"
+                  stroke-width="4"
+                  cx="50"
+                  cy="50"
+                  r="42"
+                  fill="transparent"
+                />
+              </svg>
+              <span class="progress-bar--value">03</span>
+            </div>
             <h5 class="heading--small">Распродажа</h5>
             <p>
               23, 24 и 25 сентября мы проведем &laquo;Битву Скидок&raquo;, о
@@ -988,370 +1045,342 @@
           <!----------------------------MOBILE TABLE----------------------------------->
           <div class="plan-container">
             <div class="plan-box" id="plan-box-1">
-            <div class="user-icon__box">
-              <img
-                class="user-icon"
-                src="img/6/user.svg"
-                alt="user icon"
-              />
+              <div class="user-icon__box">
+                <img class="user-icon" src="img/6/user.svg" alt="user icon" />
+              </div>
+              <div class="plan plan-1" id="plan-1">
+                <h3 class="plan__name">
+                  &laquo; Участник &raquo;
+                </h3>
+                <img
+                  id="icon-1"
+                  class="plan__icon plan-1__icon"
+                  src="img/7/arrow.svg"
+                  alt="arrow more"
+                />
+              </div>
+              <div class="feature feature-1" id="feature-1">
+                <div class="feature__row calc-height">
+                  <img
+                    class="icon-check"
+                    src="img/6/check.svg"
+                    alt="check icon"
+                  />
+                  <p class="feature__text feature-1__text feature-1__text--1">
+                    Размещение участника во всех сообществах в социальных сетях
+                    проекта, вхождение в подборки по категориям.
+                  </p>
+                </div>
+                <div class="feature__row calc-height">
+                  <img
+                    class="icon-check"
+                    src="img/6/check.svg"
+                    alt="check icon"
+                  />
+                  <p class="feature__text feature-1__text feature-1__text--2">
+                    Фирменная символика мероприятия: фирменный стиль, правила
+                    оформления, макеты листовок, наклеек и ценников.
+                  </p>
+                </div>
+                <div class="feature__row calc-height">
+                  <img
+                    class="icon-check"
+                    src="img/6/check.svg"
+                    alt="check icon"
+                  />
+                  <p class="feature__text feature-1__text feature-1__text--3">
+                    Консультация маркетологов, как правильно подготовится к
+                    мероприятию.
+                  </p>
+                </div>
+                <div class="feature__row calc-height">
+                  <img class="icon-not" src="img/6/not.svg" alt="not icon" />
+                  <p class="feature__text feature-1__text feature-1__text--3">
+                    Размещение участника во всех сообществах в социальных сетях
+                    проекта, вхождение в подборки по категориям с отдельной
+                    рекламной кампанией.
+                  </p>
+                </div>
+                <div class="feature__row calc-height">
+                  <img class="icon-not" src="img/6/not.svg" alt="not icon" />
+                  <p class="feature__text feature-1__text feature-1__text--3">
+                    Отдельная рекламная кампания по целевой аудитории участника
+                    с охватом от 100 до 200 тысяч человек.
+                  </p>
+                </div>
+                <div class="feature__row calc-height">
+                  <img class="icon-not" src="img/6/not.svg" alt="not icon" />
+                  <p class="feature__text feature-1__text feature-1__text--3">
+                    Главный партнер проекта. Присутствие на всех рекламных
+                    носителях и во всех каналах коммуникаций Битвы Скидок
+                    (соцсети, сайты, билборды)
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="plan plan-1" id="plan-1">
-              <h3 class="plan__name">
-                &laquo; Участник &raquo;
-              </h3>
-              <img
-                id="icon-1"
-                class="plan__icon plan-1__icon"
-                src="img/7/arrow.svg"
-                alt="arrow more"
-              />
+
+            <div class="plan-box" id="plan-box-2">
+              <div class="user-icon__box">
+                <img
+                  class="user-icon"
+                  src="img/6/user-plus.svg"
+                  alt="user plus icon"
+                />
+              </div>
+              <div class="plan plan-2">
+                <h3 class="plan__name plan-2__name">
+                  &laquo; Участник + &raquo;
+                </h3>
+                <img
+                  class="plan__icon plan-2__icon"
+                  src="img/7/arrow.svg"
+                  alt="arrow more"
+                  id="icon-2"
+                />
+              </div>
+              <div class="feature feature-2" id="feature-2">
+                <div class="feature__row">
+                  <img
+                    class="icon-check"
+                    src="img/6/check.svg"
+                    alt="check icon"
+                  />
+                  <p class="feature__text feature-2__text feature-2__text--1">
+                    Размещение участника во всех сообществах в социальных сетях
+                    проекта, вхождение в подборки по категориям.
+                  </p>
+                </div>
+                <div class="feature__row">
+                  <img
+                    class="icon-check"
+                    src="img/6/check.svg"
+                    alt="check icon"
+                  />
+                  <p class="feature__text feature-2__text feature-2__text--2">
+                    Фирменная символика мероприятия: фирменный стиль, правила
+                    оформления, макеты листовок, наклеек и ценников.
+                  </p>
+                </div>
+                <div class="feature__row">
+                  <img
+                    class="icon-check"
+                    src="img/6/check.svg"
+                    alt="check icon"
+                  />
+                  <p class="feature__text feature-2__text feature-2__text--3">
+                    Консультация маркетологов, как правильно подготовится к
+                    мероприятию.
+                  </p>
+                </div>
+                <div class="feature__row">
+                  <img
+                    class="icon-check"
+                    src="img/6/check.svg"
+                    alt="check icon"
+                  />
+                  <p class="feature__text feature-2__text feature-2__text--4">
+                    Размещение участника во всех сообществах в социальных сетях
+                    проекта, вхождение в подборки по категориям с отдельной
+                    рекламной кампанией.
+                  </p>
+                </div>
+                <div class="feature__row">
+                  <img class="icon-not" src="img/6/not.svg" alt="not icon" />
+                  <p class="feature__text feature-2__text feature-2__text--5">
+                    Отдельная рекламная кампания по целевой аудитории участника
+                    с охватом от 100 до 200 тысяч человек.
+                  </p>
+                </div>
+                <div class="feature__row">
+                  <img class="icon-not" src="img/6/not.svg" alt="not icon" />
+                  <p class="feature__text feature-2__text feature-2__text--6">
+                    Главный партнер проекта. Присутствие на всех рекламных
+                    носителях и во всех каналах коммуникаций Битвы Скидок
+                    (соцсети, сайты, билборды)
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="feature feature-1" id="feature-1">
-              <div class="feature__row calc-height">
+
+            <div class="plan-box" id="plan-box-3">
+              <div class="user-icon__box">
                 <img
-                  class="icon-check"
-                  src="img/6/check.svg"
-                  alt="check icon"
+                  class="user-icon"
+                  src="img/6/user-vip.svg"
+                  alt="vip user icon"
                 />
-                <p class="feature__text feature-1__text feature-1__text--1">
-                  Размещение участника во всех сообществах в социальных сетях
-                  проекта, вхождение в подборки по категориям.
-                </p>
               </div>
-              <div class="feature__row calc-height">
+              <div class="plan plan-3">
+                <h3 class="plan__name plan-3__name">
+                  &laquo; ВИП &raquo;
+                </h3>
                 <img
-                  class="icon-check"
-                  src="img/6/check.svg"
-                  alt="check icon"
+                  class="plan__icon plan-3__icon"
+                  src="img/7/arrow.svg"
+                  alt="arrow more"
+                  id="icon-3"
                 />
-                <p class="feature__text feature-1__text feature-1__text--2">
-                  Фирменная символика мероприятия: фирменный стиль, правила
-                  оформления, макеты листовок, наклеек и ценников.
-                </p>
               </div>
-              <div class="feature__row calc-height">
-                <img
-                  class="icon-check"
-                  src="img/6/check.svg"
-                  alt="check icon"
-                />
-                <p class="feature__text feature-1__text feature-1__text--3">
-                  Консультация маркетологов, как правильно подготовится к
-                  мероприятию.
-                </p>
+              <div class="feature feature-3" id="feature-3">
+                <div class="feature__row">
+                  <img
+                    class="icon-check"
+                    src="img/6/check.svg"
+                    alt="check icon"
+                  />
+                  <p class="feature__text feature-3__text feature-3__text--1">
+                    Размещение участника во всех сообществах в социальных сетях
+                    проекта, вхождение в подборки по категориям.
+                  </p>
+                </div>
+                <div class="feature__row">
+                  <img
+                    class="icon-check"
+                    src="img/6/check.svg"
+                    alt="check icon"
+                  />
+                  <p class="feature__text feature-3__text feature-3__text--2">
+                    Фирменная символика мероприятия: фирменный стиль, правила
+                    оформления, макеты листовок, наклеек и ценников.
+                  </p>
+                </div>
+                <div class="feature__row">
+                  <img
+                    class="icon-check"
+                    src="img/6/check.svg"
+                    alt="check icon"
+                  />
+                  <p class="feature__text feature-3__text feature-3__text--3">
+                    Консультация маркетологов, как правильно подготовится к
+                    мероприятию.
+                  </p>
+                </div>
+                <div class="feature__row">
+                  <img
+                    class="icon-check"
+                    src="img/6/check.svg"
+                    alt="check icon"
+                  />
+                  <p class="feature__text feature-3__text feature-3__text--4">
+                    Размещение участника во всех сообществах в социальных сетях
+                    проекта, вхождение в подборки по категориям с отдельной
+                    рекламной кампанией.
+                  </p>
+                </div>
+                <div class="feature__row">
+                  <img
+                    class="icon-check"
+                    src="img/6/check.svg"
+                    alt="check icon"
+                  />
+                  <p class="feature__text feature-3__text feature-3__text--5">
+                    Отдельная рекламная кампания по целевой аудитории участника
+                    с охватом от 100 до 200 тысяч человек.
+                  </p>
+                </div>
+                <div class="feature__row">
+                  <img class="icon-not" src="img/6/not.svg" alt="not icon" />
+                  <p class="feature__text feature-3__text feature-3__text--6">
+                    Главный партнер проекта. Присутствие на всех рекламных
+                    носителях и во всех каналах коммуникаций Битвы Скидок
+                    (соцсети, сайты, билборды)
+                  </p>
+                </div>
               </div>
-              <div class="feature__row calc-height">
+            </div>
+
+            <div class="plan-box" id="plan-box-4">
+              <div class="user-icon__box">
                 <img
-                  class="icon-not"
-                  src="img/6/not.svg"
-                  alt="not icon"
+                  class="user-icon"
+                  src="img/6/user-headliner.svg"
+                  alt="user icon"
                 />
-                <p class="feature__text feature-1__text feature-1__text--3">
-                  Размещение участника во всех сообществах в социальных сетях
-                  проекта, вхождение в подборки по категориям с отдельной
-                  рекламной кампанией.
-                </p>
               </div>
-              <div class="feature__row calc-height">
+              <div class="plan plan-4">
+                <h3 class="plan__name plan-4__name">
+                  &laquo; Хэдлайнер &raquo;
+                </h3>
                 <img
-                  class="icon-not"
-                  src="img/6/not.svg"
-                  alt="not icon"
+                  class="plan__icon plan-4__icon"
+                  src="img/7/arrow.svg"
+                  alt="arrow more"
+                  id="icon-4"
                 />
-                <p class="feature__text feature-1__text feature-1__text--3">
-                  Отдельная рекламная кампания по целевой аудитории участника с
-                  охватом от 100 до 200 тысяч человек.
-                </p>
               </div>
-              <div class="feature__row calc-height">
-                <img
-                  class="icon-not"
-                  src="img/6/not.svg"
-                  alt="not icon"
-                />
-                <p class="feature__text feature-1__text feature-1__text--3">
-                  Главный партнер проекта. Присутствие на всех рекламных
-                  носителях и во всех каналах коммуникаций Битвы Скидок
-                  (соцсети, сайты, билборды)
-                </p>
+              <div class="feature feature-4" id="feature-4">
+                <div class="feature__row">
+                  <img
+                    class="icon-check"
+                    src="img/6/check.svg"
+                    alt="check icon"
+                  />
+                  <p class="feature__text feature-4__text feature-4__text--1">
+                    Размещение участника во всех сообществах в социальных сетях
+                    проекта, вхождение в подборки по категориям.
+                  </p>
+                </div>
+                <div class="feature__row">
+                  <img
+                    class="icon-check"
+                    src="img/6/check.svg"
+                    alt="check icon"
+                  />
+                  <p class="feature__text feature-4__text feature-4__text--2">
+                    Фирменная символика мероприятия: фирменный стиль, правила
+                    оформления, макеты листовок, наклеек и ценников.
+                  </p>
+                </div>
+                <div class="feature__row">
+                  <img
+                    class="icon-check"
+                    src="img/6/check.svg"
+                    alt="check icon"
+                  />
+                  <p class="feature__text feature-4__text feature-4__text--3">
+                    Консультация маркетологов, как правильно подготовится к
+                    мероприятию.
+                  </p>
+                </div>
+                <div class="feature__row">
+                  <img
+                    class="icon-check"
+                    src="img/6/check.svg"
+                    alt="check icon"
+                  />
+                  <p class="feature__text feature-4__text feature-4__text--4">
+                    Размещение участника во всех сообществах в социальных сетях
+                    проекта, вхождение в подборки по категориям с отдельной
+                    рекламной кампанией.
+                  </p>
+                </div>
+                <div class="feature__row">
+                  <img
+                    class="icon-check"
+                    src="img/6/check.svg"
+                    alt="check icon"
+                  />
+                  <p class="feature__text feature-4__text feature-4__text--5">
+                    Отдельная рекламная кампания по целевой аудитории участника
+                    с охватом от 100 до 200 тысяч человек.
+                  </p>
+                </div>
+                <div class="feature__row">
+                  <img
+                    class="icon-check"
+                    src="img/6/check.svg"
+                    alt="check icon"
+                  />
+                  <p class="feature__text feature-4__text feature-4__text--6">
+                    Главный партнер проекта. Присутствие на всех рекламных
+                    носителях и во всех каналах коммуникаций Битвы Скидок
+                    (соцсети, сайты, билборды)
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="plan-box" id="plan-box-2">
-            <div class="user-icon__box">
-              <img
-                class="user-icon"
-                src="img/6/user-plus.svg"
-                alt="user plus icon"
-              />
-            </div>
-            <div class="plan plan-2">
-              <h3 class="plan__name plan-2__name">
-                &laquo; Участник + &raquo;
-              </h3>
-              <img
-                class="plan__icon plan-2__icon"
-                src="img/7/arrow.svg"
-                alt="arrow more"
-                id="icon-2"
-              />
-            </div>
-            <div class="feature feature-2" id="feature-2">
-              <div class="feature__row">
-                <img
-                  class="icon-check"
-                  src="img/6/check.svg"
-                  alt="check icon"
-                />
-                <p class="feature__text feature-2__text feature-2__text--1">
-                  Размещение участника во всех сообществах в социальных сетях
-                  проекта, вхождение в подборки по категориям.
-                </p>
-              </div>
-              <div class="feature__row">
-                <img
-                  class="icon-check"
-                  src="img/6/check.svg"
-                  alt="check icon"
-                />
-                <p class="feature__text feature-2__text feature-2__text--2">
-                  Фирменная символика мероприятия: фирменный стиль, правила
-                  оформления, макеты листовок, наклеек и ценников.
-                </p>
-              </div>
-              <div class="feature__row">
-                <img
-                  class="icon-check"
-                  src="img/6/check.svg"
-                  alt="check icon"
-                />
-                <p class="feature__text feature-2__text feature-2__text--3">
-                  Консультация маркетологов, как правильно подготовится к
-                  мероприятию.
-                </p>
-              </div>
-              <div class="feature__row">
-                <img
-                  class="icon-check"
-                  src="img/6/check.svg"
-                  alt="check icon"
-                />
-                <p class="feature__text feature-2__text feature-2__text--4">
-                  Размещение участника во всех сообществах в социальных сетях
-                  проекта, вхождение в подборки по категориям с отдельной
-                  рекламной кампанией.
-                </p>
-              </div>
-              <div class="feature__row">
-                <img
-                  class="icon-not"
-                  src="img/6/not.svg"
-                  alt="not icon"
-                />
-                <p class="feature__text feature-2__text feature-2__text--5">
-                  Отдельная рекламная кампания по целевой аудитории участника с
-                  охватом от 100 до 200 тысяч человек.
-                </p>
-              </div>
-              <div class="feature__row">
-                <img
-                  class="icon-not"
-                  src="img/6/not.svg"
-                  alt="not icon"
-                />
-                <p class="feature__text feature-2__text feature-2__text--6">
-                  Главный партнер проекта. Присутствие на всех рекламных
-                  носителях и во всех каналах коммуникаций Битвы Скидок
-                  (соцсети, сайты, билборды)
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="plan-box" id="plan-box-3">
-            <div class="user-icon__box">
-              <img
-                class="user-icon"
-                src="img/6/user-vip.svg"
-                alt="vip user icon"
-              />
-            </div>
-            <div class="plan plan-3">
-              <h3 class="plan__name plan-3__name">
-                &laquo; ВИП &raquo;
-              </h3>
-              <img
-                class="plan__icon plan-3__icon"
-                src="img/7/arrow.svg"
-                alt="arrow more"
-                id="icon-3"
-              />
-            </div>
-            <div class="feature feature-3" id="feature-3">
-              <div class="feature__row">
-                <img
-                  class="icon-check"
-                  src="img/6/check.svg"
-                  alt="check icon"
-                />
-                <p class="feature__text feature-3__text feature-3__text--1">
-                  Размещение участника во всех сообществах в социальных сетях
-                  проекта, вхождение в подборки по категориям.
-                </p>
-              </div>
-              <div class="feature__row">
-                <img
-                  class="icon-check"
-                  src="img/6/check.svg"
-                  alt="check icon"
-                />
-                <p class="feature__text feature-3__text feature-3__text--2">
-                  Фирменная символика мероприятия: фирменный стиль, правила
-                  оформления, макеты листовок, наклеек и ценников.
-                </p>
-              </div>
-              <div class="feature__row">
-                <img
-                  class="icon-check"
-                  src="img/6/check.svg"
-                  alt="check icon"
-                />
-                <p class="feature__text feature-3__text feature-3__text--3">
-                  Консультация маркетологов, как правильно подготовится к
-                  мероприятию.
-                </p>
-              </div>
-              <div class="feature__row">
-                <img
-                  class="icon-check"
-                  src="img/6/check.svg"
-                  alt="check icon"
-                />
-                <p class="feature__text feature-3__text feature-3__text--4">
-                  Размещение участника во всех сообществах в социальных сетях
-                  проекта, вхождение в подборки по категориям с отдельной
-                  рекламной кампанией.
-                </p>
-              </div>
-              <div class="feature__row">
-                <img
-                  class="icon-check"
-                  src="img/6/check.svg"
-                  alt="check icon"
-                />
-                <p class="feature__text feature-3__text feature-3__text--5">
-                  Отдельная рекламная кампания по целевой аудитории участника с
-                  охватом от 100 до 200 тысяч человек.
-                </p>
-              </div>
-              <div class="feature__row">
-                <img
-                  class="icon-not"
-                  src="img/6/not.svg"
-                  alt="not icon"
-                />
-                <p class="feature__text feature-3__text feature-3__text--6">
-                  Главный партнер проекта. Присутствие на всех рекламных
-                  носителях и во всех каналах коммуникаций Битвы Скидок
-                  (соцсети, сайты, билборды)
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="plan-box" id="plan-box-4">
-            <div class="user-icon__box">
-              <img
-                class="user-icon"
-                src="img/6/user-headliner.svg"
-                alt="user icon"
-              />
-            </div>
-            <div class="plan plan-4">
-              <h3 class="plan__name plan-4__name">
-                &laquo; Хэдлайнер &raquo;
-              </h3>
-              <img
-                class="plan__icon plan-4__icon"
-                src="img/7/arrow.svg"
-                alt="arrow more"
-                id="icon-4"
-              />
-            </div>
-            <div class="feature feature-4" id="feature-4">
-              <div class="feature__row">
-                <img
-                  class="icon-check"
-                  src="img/6/check.svg"
-                  alt="check icon"
-                />
-                <p class="feature__text feature-4__text feature-4__text--1">
-                  Размещение участника во всех сообществах в социальных сетях
-                  проекта, вхождение в подборки по категориям.
-                </p>
-              </div>
-              <div class="feature__row">
-                <img
-                  class="icon-check"
-                  src="img/6/check.svg"
-                  alt="check icon"
-                />
-                <p class="feature__text feature-4__text feature-4__text--2">
-                  Фирменная символика мероприятия: фирменный стиль, правила
-                  оформления, макеты листовок, наклеек и ценников.
-                </p>
-              </div>
-              <div class="feature__row">
-                <img
-                  class="icon-check"
-                  src="img/6/check.svg"
-                  alt="check icon"
-                />
-                <p class="feature__text feature-4__text feature-4__text--3">
-                  Консультация маркетологов, как правильно подготовится к
-                  мероприятию.
-                </p>
-              </div>
-              <div class="feature__row">
-                <img
-                  class="icon-check"
-                  src="img/6/check.svg"
-                  alt="check icon"
-                />
-                <p class="feature__text feature-4__text feature-4__text--4">
-                  Размещение участника во всех сообществах в социальных сетях
-                  проекта, вхождение в подборки по категориям с отдельной
-                  рекламной кампанией.
-                </p>
-              </div>
-              <div class="feature__row">
-                <img
-                  class="icon-check"
-                  src="img/6/check.svg"
-                  alt="check icon"
-                />
-                <p class="feature__text feature-4__text feature-4__text--5">
-                  Отдельная рекламная кампания по целевой аудитории участника с
-                  охватом от 100 до 200 тысяч человек.
-                </p>
-              </div>
-              <div class="feature__row">
-                <img
-                  class="icon-check"
-                  src="img/6/check.svg"
-                  alt="check icon"
-                />
-                <p class="feature__text feature-4__text feature-4__text--6">
-                  Главный партнер проекта. Присутствие на всех рекламных
-                  носителях и во всех каналах коммуникаций Битвы Скидок
-                  (соцсети, сайты, билборды)
-                </p>
-              </div>
-            </div>
-          </div>
-          </div>
-          
           <!----------------------------MOBILE TABLE----------------------------------->
         </div>
       </section>
@@ -1401,15 +1430,14 @@
             <div class="answer closed" id="answer-2">
               <div class="answer__text-box answer__text-box--2">
                 <p class="answer__text">
-                  Цены на товары растут, а доходы населения остались прежними. Как
-                  следствие, количество покупок снизилось, а желание покупать —
-                  осталось. Люди и сейчас готовы потратить деньги, но только с
-                  условием, что покупка будет очень выгодной. Потенциальные
-                  покупатели ждут момента снижения цен и внимательно следят за
-                  акциями и распродажами.
+                  Цены на товары растут, а доходы населения остались прежними.
+                  Как следствие, количество покупок снизилось, а желание
+                  покупать — осталось. Люди и сейчас готовы потратить деньги, но
+                  только с условием, что покупка будет очень выгодной.
+                  Потенциальные покупатели ждут момента снижения цен и
+                  внимательно следят за акциями и распродажами.
                 </p>
               </div>
-              
             </div>
             <div class="question question-3">
               <h3 class="question__name">Как сформирована цена участия?</h3>
@@ -1428,14 +1456,13 @@
                   показать мощный результат всем участникам, и с еще большим
                   успехом провести следующую &laquo; Битву Скидок &raquo;. За
                   стоимость участия в &laquo; Битве скидок &raquo; вы получаете
-                  рекламную кампанию с охватом 6,5 миллионов человек. Представьте,
-                  что умножите свой рекламный бюджет в 10 раз. В &laquo; Битве
-                  Скидок &raquo; нам важно привлечь буквально каждого жителя
-                  Москвы и Московской области. Поэтому мы выделяем максимальный
-                  бюджет на рекламу.
+                  рекламную кампанию с охватом 6,5 миллионов человек.
+                  Представьте, что умножите свой рекламный бюджет в 10 раз. В
+                  &laquo; Битве Скидок &raquo; нам важно привлечь буквально
+                  каждого жителя Москвы и Московской области. Поэтому мы
+                  выделяем максимальный бюджет на рекламу.
                 </p>
               </div>
-              
             </div>
           </div>
         </div>
