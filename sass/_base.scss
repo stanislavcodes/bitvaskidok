@@ -8,12 +8,15 @@
 
 html {
   font-size: 62.5%;
-  @include breakpointMax(small) {
-    font-size: 28%;
-  }
-  @include breakpointMax(xmedium) {
-    font-size: 37.5%;
-  }
+  // @include breakpointMax(xsmall) {
+  //   font-size: 20%;
+  // }
+  // @include breakpointMax(small) {
+  //   font-size: 28%;
+  // }
+  // @include breakpointMax(xmedium) {
+  //   font-size: 37.5%;
+  // }
   @include breakpointMax(xlarge) {
     font-size: 45%;
   }
@@ -37,4 +40,11 @@ body::-webkit-scrollbar {
 }
 body::-webkit-scrollbar-thumb {
   background-color: #979797;
+}
+.scroll-lock {
+  overflow: hidden;
+  // position: fixed;
+  // top: 0;
+  // width: 100%;
+  // height: 100%;
 }

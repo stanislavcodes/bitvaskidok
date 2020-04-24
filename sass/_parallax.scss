@@ -12,6 +12,9 @@
       @include breakpointMax(xlarge) {
         height: 40rem;
       }
+      @include breakpointMax(xsmall) {
+        height: 32rem;
+      }
 
       @include breakpointMax(small) {
         background-position: 10rem 15rem;
@@ -95,6 +98,7 @@
       background-size: 240%;
     }
     @include breakpointMax(small) {
+      top: 0;
       background-position: 10rem 15rem;
       // background: url(../img/parallax-2/parallax-2-bg-mobile-sm.svg) center no-repeat;
       background: none;
@@ -152,7 +156,7 @@
       display: flex;
     }
     @include breakpointMax(small) {
-      padding-top: 19rem;
+      padding-top: 3rem;
     }
   }
 }

@@ -436,6 +436,9 @@
         @include breakpointMax(medium) {
           margin-bottom: 4rem;
         }
+        @include breakpointMax(xsmall) {
+          margin-bottom: 1rem;
+        }
       }
     }
   }
@@ -456,9 +459,11 @@
       background-size: 140%;
     }
     @include breakpointMax(small) {
-      background: url(../img/parallax-2/parallax-2-bg-mobile-sm.svg) center top;
-      background-repeat: no-repeat;
+      background: url(../img/parallax-2/parallax-2-bg-mobile.svg) center top no-repeat;
       background-size: 150%;
+    }
+    @include breakpointMax(xsmall) {
+      background-size: 170%;
     }
 
     &__heading-box {
@@ -472,6 +477,10 @@
       @include breakpointMax(small) {
         width: 23rem;
         height: 5rem;
+      }
+      @include breakpointMax(xsmall) {
+        width: 20rem;
+        height: 4rem;
       }
     }
 
@@ -497,8 +506,10 @@
       margin-bottom: 3rem;
 
       @include breakpointMax(xsmall) {
-        max-width: 40rem;
+        max-width: 20rem;
         font-size: 1.4rem;
+        word-wrap: normal;
+        margin-bottom: 1rem;
       }
     }
     .road {
@@ -562,11 +573,11 @@
         }
         @include breakpointMax(small) {
           max-width: 414px;
-          margin: 55rem 0 0 0;
+          margin: 45rem 0 0 0;
         }
         @include breakpointMax(xsmall) {
           max-width: 360px;
-          margin: 45rem 0 0 0;
+          margin: 37rem 0 0 0;
         }
 
         .text {
@@ -588,7 +599,7 @@
               text-align: center;
             }
             @include breakpointMax(xsmall) {
-              margin: 5rem 2rem 10rem 9rem;
+              margin: 7rem 2rem 12rem 9rem;
             }
           }
           &-2 {
@@ -652,6 +663,9 @@
 
             @include breakpointMax(xmedium) {
               max-width: 45rem;
+            }
+            @include breakpointMax(xsmall) {
+              font-size: 1.5rem;
             }
           }
         }
@@ -998,6 +1012,11 @@
       height: 2rem;
       margin: 0 1rem;
       transition: visibility 0s;
+      @include breakpointMax(xsmall) {
+        width: 1.8rem;
+        height: 1.4rem;
+        margin: 0 .6rem;
+      }
     }
 
     .icon-not {
@@ -1005,6 +1024,11 @@
       height: 2rem;
       margin: 0 1.3rem;
       transition: visibility 0s;
+      @include breakpointMax(xsmall) {
+        width: 1.4rem;
+        height: 1.4rem;
+        margin: 0 .8rem;
+      }
     }
   }
 
@@ -1071,7 +1095,7 @@
           font-size: 1.8rem;
         }
         @include breakpointMax(xsmall) {
-          font-size: 1.8rem;
+          font-size: 1.6rem;
         }
       }
 
@@ -1109,6 +1133,10 @@
         @include breakpointMax(small) {
           font-size: 1.5rem;
         }
+        @include breakpointMax(xsmall) {
+          font-size: 1.4rem;
+          text-align: justify;
+        }
       }
     }
   }
@@ -1135,6 +1163,9 @@
 
       @include breakpointMax(small) {
         font-size: 1.6rem;
+      }
+      @include breakpointMax(xsmall) {
+        font-size: 1.4rem;
       }
     }
 
@@ -1166,6 +1197,10 @@
         @include breakpointMax(small) {
           margin-bottom: 3rem;
           font-size: 1.6rem;
+        }
+        @include breakpointMax(xsmall) {
+          margin-bottom: 2rem;
+          font-size: 1.4rem;
         }
       }
 
@@ -1314,6 +1349,11 @@
   grid-template-columns: 1fr;
   grid-template-rows: 5rem min-content 1fr;
   z-index: 10000;
+  // padding: 0 2rem;
+
+  @include breakpointMax(small) {
+    width: 95vw;
+  }
 
   &__bg-close {
     position: absolute;
@@ -1361,6 +1401,10 @@
 
   p {
     font-family: $gpMedium;
+
+    @include breakpointMax(small) {
+      padding: 0 4rem;
+    }
   }
 
   &__form {
@@ -1372,9 +1416,14 @@
   }
 
   &__input {
-    width: 35rem;
+    // width: 35rem;
+    width: 80%;
     margin-top: 0;
     margin-bottom: 2rem;
+
+    &:nth-child(5) {
+      width: 50%;
+    }
   }
 }
 

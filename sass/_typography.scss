@@ -73,6 +73,9 @@ body {
     @include breakpointMax(small) {
       font-size: 1.6rem;
     }
+    @include breakpointMax(xsmall) {
+      font-size: 1.4rem;
+    }
   }
 
   &--small {

@@ -315,18 +315,22 @@ const popupOpen = document.querySelectorAll(".cta-popup");
 const popup = document.querySelector(".popup__container");
 const popupClose = document.getElementById("close-popup");
 const popupCloseOnBg = document.querySelector(".popup__bg-close");
+const body = document.querySelector(".body");
 
 popupClose.addEventListener("click", function () {
   popup.style.display = `none`;
+  body.classList.toggle("scroll-lock");
 });
 
 popupCloseOnBg.addEventListener("click", function () {
   popup.style.display = `none`;
+  body.classList.toggle("scroll-lock");
 });
 
 for (i = 0; i < popupOpen.length; i++) {
-  popupOpen[i].addEventListener("click", function () {
+  popupOpen[i].addEventListener("click", function (e) {
     popup.style.display = `flex`;
+    body.classList.toggle("scroll-lock");
   });
 }
 
